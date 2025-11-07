@@ -8,11 +8,11 @@ Workflows must be organized in the `workflow_traces/` directory following this s
 
 ```
 workflow_traces/
-??? <workflow_name>/
-    ??? <variant_name>_schema.json        # Workflow schema (required)
-    ??? <variant_name>/                   # Trace files directory (required)
-        ??? *.BlockTrace.json              # Block-level I/O traces
-        ??? *.DatalifeTrace.json           # Application-level I/O traces
+ <workflow_name>/
+    <variant_name>_schema.json        # Workflow schema (required)
+    <variant_name>/                   # Trace files directory (required)
+        *.BlockTrace.json              # Block-level I/O traces
+        *.DatalifeTrace.json           # Application-level I/O traces
 ```
 
 ## Naming Conventions
@@ -27,23 +27,23 @@ workflow_traces/
 ### Example 1: DDMD Workflow
 ```
 workflow_traces/ddmd/
-??? ddmd_4n_pfs_large_schema.json
-??? ddmd_4n_pfs_large/
-    ??? file1.BlockTrace.json
-    ??? file1.DatalifeTrace.json
-    ??? file2.BlockTrace.json
-    ??? file2.DatalifeTrace.json
+ ddmd_4n_pfs_large_schema.json
+ ddmd_4n_pfs_large/
+    file1.BlockTrace.json
+    file1.DatalifeTrace.json
+    file2.BlockTrace.json
+    file2.DatalifeTrace.json
 ```
 
 ### Example 2: Montage Workflow
 ```
 workflow_traces/montage/
-??? montage_2n_16blue_schema.json
-??? montage_2n_16blue/
-    ??? task1.BlockTrace.json
-    ??? task1.DatalifeTrace.json
-    ??? task2.BlockTrace.json
-    ??? task2.DatalifeTrace.json
+ montage_2n_16blue_schema.json
+ montage_2n_16blue/
+    task1.BlockTrace.json
+    task1.DatalifeTrace.json
+    task2.BlockTrace.json
+    task2.DatalifeTrace.json
 ```
 
 ## Auto-Detection Logic
@@ -56,8 +56,8 @@ The server automatically detects workflow files using the following strategy:
 
 2. **Trace Directory Detection** (two-step approach):
    - **Step 1 (Primary)**: Infers trace directory from schema filename
-     - Schema: `ddmd_4n_pfs_large_schema.json` ? Trace directory: `ddmd_4n_pfs_large/`
-     - Schema: `montage_2n_16blue_schema.json` ? Trace directory: `montage_2n_16blue/`
+     - Schema: `ddmd_4n_pfs_large_schema.json`  Trace directory: `ddmd_4n_pfs_large/`
+     - Schema: `montage_2n_16blue_schema.json`  Trace directory: `montage_2n_16blue/`
    
    - **Step 2 (Fallback)**: If Step 1 fails, searches for any subdirectory containing trace JSON files
      - Looks for files ending with `.json`
@@ -98,10 +98,10 @@ To add a new workflow:
 
 The server validates workflows on load:
 
-- ? Schema file must exist and end with `_schema.json`
-- ? Trace directory must exist and contain trace files
-- ? At least one `*.BlockTrace.json` or `*.DatalifeTrace.json` file must be present
-- ? If validation fails, a descriptive error message is shown
+-  Schema file must exist and end with `_schema.json`
+-  Trace directory must exist and contain trace files
+-  At least one `*.BlockTrace.json` or `*.DatalifeTrace.json` file must be present
+-  If validation fails, a descriptive error message is shown
 
 ## Troubleshooting
 

@@ -155,7 +155,7 @@ Task 1 name: preprocess
   Stage order: 1
   Parallelism: 4
   
-Add another task? (y/n): y
+Add another task (y/n): y
 
 Task 2 name: analysis
   Stage order: 2
@@ -343,7 +343,7 @@ def filter_by_stage(workflow_name: str, stages: List[int]) -> List[str]:
 
 ## 2. New Analysis Tools
 
-### A. Bottleneck Detection Tool ? (Priority 1)
+### A. Bottleneck Detection Tool  (Priority 1)
 
 **Description:**
 Automatically identifies performance bottlenecks in workflow execution.
@@ -391,7 +391,7 @@ def detect_bottlenecks(
 
 ---
 
-### B. Parallel Efficiency Analysis ? (Priority 3)
+### B. Parallel Efficiency Analysis  (Priority 3)
 
 **Description:**
 Analyzes how well parallel task instances perform and identifies load imbalances.
@@ -502,7 +502,7 @@ def analyze_data_reuse(
 
 ## 3. New Visualization Features
 
-### A. Timeline/Gantt Chart View ? (Priority 2)
+### A. Timeline/Gantt Chart View  (Priority 2)
 
 **Description:**
 Interactive timeline showing task execution over time with parallel execution visualization.
@@ -574,7 +574,7 @@ def generate_heatmap(
 - I/O intensity heatmap per task/file
 - Stage-by-stage resource usage
 - Color-coded performance metrics (green=low, red=high)
-- Matrix view: tasks ? files
+- Matrix view: tasks  files
 - Interactive tooltips with exact values
 - Downloadable as PNG/SVG
 
@@ -1091,13 +1091,13 @@ def explore_paths(
 ## Implementation Priority
 
 ### Phase 1: Core Analysis Tools (1-2 weeks)
-- ? Bottleneck Detection
-- ? Parallel Efficiency Analysis
-- ? Data Reuse Pattern Analysis
+-  Bottleneck Detection
+-  Parallel Efficiency Analysis
+-  Data Reuse Pattern Analysis
 
 ### Phase 2: New Visualizations (1-2 weeks)
-- ? Timeline/Gantt Chart
-- ? Heatmap Visualization
+-  Timeline/Gantt Chart
+-  Heatmap Visualization
 - Export Capabilities (CSV, JSON)
 
 ### Phase 3: Advanced Features (2-3 weeks)
@@ -1132,13 +1132,13 @@ def explore_paths(
 
 Before implementing each feature, consider:
 
-1. **Data Requirements**: What additional trace data is needed?
-2. **Performance**: Will this scale to large workflows (1000+ tasks)?
-3. **User Interface**: How will users interact with this feature?
-4. **Output Format**: What's the most useful way to present results?
-5. **Dependencies**: Are new libraries required?
-6. **Testing**: How can we validate correctness?
-7. **Documentation**: What examples and use cases should we document?
+1. **Data Requirements**: What additional trace data is needed
+2. **Performance**: Will this scale to large workflows (1000+ tasks)
+3. **User Interface**: How will users interact with this feature
+4. **Output Format**: What's the most useful way to present results
+5. **Dependencies**: Are new libraries required
+6. **Testing**: How can we validate correctness
+7. **Documentation**: What examples and use cases should we document
 
 ---
 

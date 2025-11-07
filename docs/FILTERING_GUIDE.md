@@ -23,7 +23,7 @@ This menu provides step-by-step prompts:
 
 **Task Range Filtering:**
 ```
-Filter by task range? (y/n): y
+Filter by task range (y/n): y
   Start task ID (e.g., openmm_0): openmm_0
   End task ID (e.g., aggregate_0): training_0
 ```
@@ -51,14 +51,14 @@ Tasks: openmm aggregate_0 training
 ```
 
 **Supported formats**:
-1. **Task name only** (expands to all instances): `openmm` ? `openmm_0` through `openmm_11`
-2. **Specific instance**: `openmm_0` ? just that one instance
-3. **Mixed**: `openmm aggregate_0` ? all openmm instances + aggregate instance 0
+1. **Task name only** (expands to all instances): `openmm`  `openmm_0` through `openmm_11`
+2. **Specific instance**: `openmm_0`  just that one instance
+3. **Mixed**: `openmm aggregate_0`  all openmm instances + aggregate instance 0
 
 **Separators**: Both spaces and commas work
-- `openmm aggregate training` ?
-- `openmm,aggregate,training` ?
-- `openmm, aggregate training` ?
+- `openmm aggregate training` 
+- `openmm,aggregate,training` 
+- `openmm, aggregate training` 
 
 ---
 
@@ -87,9 +87,9 @@ Task range: openmm training
 
 **Examples**:
 ```
-openmm training     ? sankey_openmm_to_training.html
-aggregate inference ? sankey_aggregate_to_inference.html
-openmm inference    ? sankey_openmm_to_inference.html (entire workflow)
+openmm training     sankey_openmm_to_training.html
+aggregate inference sankey_aggregate_to_inference.html
+openmm inference    sankey_openmm_to_inference.html (entire workflow)
 ```
 
 ---
@@ -98,10 +98,10 @@ openmm inference    ? sankey_openmm_to_inference.html (entire workflow)
 
 ### DDMD Workflow Tasks:
 ```
-1. openmm      (stage 0, parallelism: 12) ? instances: openmm_0 to openmm_11
-2. aggregate   (stage 1, parallelism: 1)  ? instance:  aggregate_0
-3. training    (stage 1, parallelism: 1)  ? instance:  training_0
-4. inference   (stage 2, parallelism: 1)  ? instance:  inference_0
+1. openmm      (stage 0, parallelism: 12)  instances: openmm_0 to openmm_11
+2. aggregate   (stage 1, parallelism: 1)   instance:  aggregate_0
+3. training    (stage 1, parallelism: 1)   instance:  training_0
+4. inference   (stage 2, parallelism: 1)   instance:  inference_0
 ```
 
 ### Stage Order & Dependencies:
@@ -150,12 +150,12 @@ This expands to all 12 openmm instances + training_0
 
 ## Tips
 
-? **DO**:
+ **DO**:
 - Use Option 4 for quick Sankey generation
 - Use task names without indices in Option 4
 - Use specific indices when you need precise control
 
-? **DON'T**:
+ **DON'T**:
 - Mix task names with indices in Option 4 (e.g., `openmm_0 training`)
 - Use commas in Option 4 (space-separated only)
 - Use more than 2 task names in Option 4

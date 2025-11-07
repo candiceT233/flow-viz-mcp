@@ -5,7 +5,7 @@
 ### Major Issues Resolved:
 
 1.  **Repository Preparation for Publishing:**
-    *   Updated all markdown files (`README.md`, `AGENT.md`, etc.) to remove absolute paths, making the repository portable.
+    *   Updated all markdown files (`README.md`, etc.) to remove absolute paths, making the repository portable.
     *   Added `README.md` files to the `src/` and `src/dfl_mcp/` directories to improve documentation and organization.
 
 2.  **Sankey Diagram Readability and Layout:**

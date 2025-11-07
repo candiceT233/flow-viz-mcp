@@ -120,5 +120,18 @@ dmypy.json
 /output/
 /scratch_files/
 
+# Other files
+/workflow_traces/1kgenome/
+
 # Zone.Identifier files
 *:Zone.Identifier
+
+# Files to ignore from public repo
+AGENT.md
+ARCHITECTURE.md
+GEMINI.md
+docs/DPM_CORRECTIONS.md
+docs/v1_plan.md
+docs/v1_spec.md
+docs/v2_plan.md
+docs/v2_spec.md

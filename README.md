@@ -163,11 +163,11 @@ Place workflow trace data in the `workflow_traces/` directory with the following
 
 ```
 workflow_traces/
-  ??? <workflow_name>/
-      ??? <workflow_name>_4n_pfs_large_schema.json
-      ??? <workflow_name>_4n_pfs_large/
-          ??? *.BlockTrace.json
-          ??? *.DatalifeTrace.json
+   <workflow_name>/
+       <workflow_name>_4n_pfs_large_schema.json
+       <workflow_name>_4n_pfs_large/
+           *.BlockTrace.json
+           *.DatalifeTrace.json
 ```
 
 The system automatically discovers all workflows on startup.
@@ -176,48 +176,48 @@ The system automatically discovers all workflows on startup.
 
 ```
 flow-viz-mcp/
-??? README.md                          # Project overview and usage guide
-??? interactive_cli.py                 # Interactive command-line interface
-??? run_server.py                      # MCP server launcher
-??? run_client.py                      # Example MCP client
-??? pyproject.toml                     # Python project configuration
-?
-??? docs/                              # Documentation
-?   ??? FILTERING_GUIDE.md            # Task filtering input format guide
-?   ??? spec.md                       # Technical specification
-?   ??? plan.md                       # Development plan
-?
-??? src/dfl_mcp/                      # Main source code
-?   ??? server.py                     # MCP server implementation
-?   ??? config.py                     # Configuration settings
-?   ??? data_parser.py                # Trace and schema parsers
-?   ??? graph_builder.py              # DFL-DAG construction
-?   ??? models.py                     # Data models
-?   ??? analysis/                     # Analysis modules
-?       ??? sankey_utils.py           # Sankey diagram generation
-?       ??? metrics.py                # Flow statistics
-?       ??? critical_path.py          # Critical path analysis
-?       ??? pattern_rules.py          # Pattern identification
-?       ??? task_ordering.py          # Task ordering utilities
-?
-??? tests/                            # Unit tests
-?   ??? test_parser.py
-?   ??? test_builder.py
-?   ??? test_sankey.py
-?   ??? test_stats.py
-?
-??? workflow_traces/                  # Workflow trace data
-?   ??? ddmd/
-?   ?   ??? ddmd_4n_pfs_large_schema.json
-?   ?   ??? ddmd_4n_pfs_large/
-?   ?       ??? *.BlockTrace.json
-?   ?       ??? *.DatalifeTrace.json
-?   ??? montage/
-?       ??? ...
-?
-??? output/                           # Generated visualizations
-    ??? sankey_*.html
-    ??? *_summary.txt
+ README.md                          # Project overview and usage guide
+ interactive_cli.py                 # Interactive command-line interface
+ run_server.py                      # MCP server launcher
+ run_client.py                      # Example MCP client
+ pyproject.toml                     # Python project configuration
+
+ docs/                              # Documentation
+    FILTERING_GUIDE.md            # Task filtering input format guide
+    spec.md                       # Technical specification
+    plan.md                       # Development plan
+
+ src/dfl_mcp/                      # Main source code
+    server.py                     # MCP server implementation
+    config.py                     # Configuration settings
+    data_parser.py                # Trace and schema parsers
+    graph_builder.py              # DFL-DAG construction
+    models.py                     # Data models
+    analysis/                     # Analysis modules
+        sankey_utils.py           # Sankey diagram generation
+        metrics.py                # Flow statistics
+        critical_path.py          # Critical path analysis
+        pattern_rules.py          # Pattern identification
+        task_ordering.py          # Task ordering utilities
+
+ tests/                            # Unit tests
+    test_parser.py
+    test_builder.py
+    test_sankey.py
+    test_stats.py
+
+ workflow_traces/                  # Workflow trace data
+    ddmd/
+       ddmd_4n_pfs_large_schema.json
+       ddmd_4n_pfs_large/
+           *.BlockTrace.json
+           *.DatalifeTrace.json
+    montage/
+        ...
+
+ output/                           # Generated visualizations
+    sankey_*.html
+    *_summary.txt
 ```
 
 ## Documentation
@@ -225,6 +225,6 @@ flow-viz-mcp/
 - **[Task Filtering Guide](docs/FILTERING_GUIDE.md)** - Comprehensive guide on how to specify tasks for filtering and visualization, including input formats, examples, and common use cases
 - **[Workflow Structure Guide](docs/workflow_structure.md)** - Required directory structure and naming conventions for adding new workflow traces
 - **[Technical Specification](docs/spec.md)** - Complete technical specification including system architecture, data models, and implementation details
-- **[Development Plan](docs/plan.md)** - Project development roadmap and planning documents
+- **[Development Plan](docs.md)** - Project development roadmap and planning documents
 - **[Future Enhancements](docs/TODO.md)** - Proposed features and improvements for future development
 - **[Original Request](docs/request.md)** - Original project requirements and feature requests

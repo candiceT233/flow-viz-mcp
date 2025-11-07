@@ -374,8 +374,6 @@ class DPMResult(BaseModel):
 ## Files Updated in This Session
 
 ✅ `/spec.md` - Main DPM specification with complete examples  
-✅ `/ARCHITECTURE.md` - System overview with complete examples  
-✅ `/docs/DPM_CORRECTIONS.md` - Correction summary  
 ✅ `/docs/DESIGN_FINALIZED.md` - This file (final design)
 
 ---

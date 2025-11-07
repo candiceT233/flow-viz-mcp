@@ -323,7 +323,6 @@ rather than requiring pre-existence based on schema patterns.
 
 ### Files Created:
 - sessions/cursor-nov-4-2025.txt (this file)
-- (AGENT.md to be created)
 
 ### No Files Deleted
 
