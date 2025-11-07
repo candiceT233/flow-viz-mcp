@@ -123,6 +123,10 @@ dmypy.json
 # Other files
 /workflow_traces/1kgenome/
 
+# Input and session data
+/input/
+/sessions/
+
 # Zone.Identifier files
 *:Zone.Identifier
 
