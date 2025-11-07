@@ -1,0 +1,13 @@
+This is a summary of the chat session on November 4, 2025.
+
+The main goal of the session is to debug why certain tasks (`openmm_1`, `openmm_2`, `openmm_3`) are not appearing in the Sankey diagram visualization.
+
+Key activities included:
+
+1.  **Project Context Review**: Reviewed the overall project structure and the purpose of the MCP server for DFL visualization.
+2.  **Problem Identification**: Confirmed that specific tasks are missing from the Sankey diagram, indicating a potential issue with graph construction or data correlation.
+3.  **Trace Data Analysis**: Examined the different types of trace files (`.blk_trace.json`, `.datalife.json`) and the workflow schema, understanding their formats and how `TraceParser` processes them.
+4.  **Debugging Strategy**: Formulated a plan to investigate `_get_pid_to_task_name_map` and `_add_edges_and_annotate` functions within `src/dfl_mcp/graph_builder.py` to understand why edges for the missing tasks are not being created.
+5.  **Code Review**: Started reviewing the `src/dfl_mcp/graph_builder.py` file to understand its logic.
+
+The session is currently focused on understanding the graph building logic to resolve the missing tasks issue.

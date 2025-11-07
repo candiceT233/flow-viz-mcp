@@ -1,0 +1,192 @@
+{
+  "Version": "3.3.0", 
+  "Began": "Fri May  2 02:58:04 2025", 
+  "Command line": "ior -a POSIX -w -r -t 4m -b 4m -s 25 -e -F -o /dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/iortest_50gb/pior_s_4m_50gb_n512_2.bin -O summaryFormat=JSON -O summaryFile=pior_s_4m_50gb_n512_2.json", 
+  "Machine": "Linux dc038.local", 
+  "tests": [
+    {
+    "TestID": 0, 
+    "StartTime": "Fri May  2 02:58:04 2025"    , "Path": "/dev/shm/tang584/qfs/projects/datamesh/tang584/linux_resource_detect/io_test/iortest_50gb","Capacity": "125.8 GiB", "Used Capacity": "0.4%","Inodes": "31.4 Mi", "Used Inodes" : "0.0%"
+, 
+    "Parameters": {
+      "testID": 0, 
+      "refnum": 0, 
+      "api": "POSIX", 
+      "platform": "dc038.local(Linux)", 
+      "testFileName": "/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/iortest_50gb/pior_s_4m_50gb_n512_2.bin", 
+      "hintsFileName": "(null)", 
+      "deadlineForStonewall": 0, 
+      "stoneWallingWearOut": 0, 
+      "maxTimeDuration": 0, 
+      "outlierThreshold": 0, 
+      "options": "(null)", 
+      "dryRun": 0, 
+      "nodes": 4, 
+      "memoryPerTask": 0, 
+      "memoryPerNode": 0, 
+      "tasksPerNode": 128, 
+      "repetitions": 1, 
+      "multiFile": 0, 
+      "interTestDelay": 0, 
+      "fsync": 1, 
+      "fsyncperwrite": 0, 
+      "useExistingTestFile": 0, 
+      "showHints": 0, 
+      "uniqueDir": 0, 
+      "individualDataSets": 0, 
+      "singleXferAttempt": 0, 
+      "readFile": 1, 
+      "writeFile": 1, 
+      "filePerProc": 1, 
+      "reorderTasks": 0, 
+      "reorderTasksRandom": 0, 
+      "reorderTasksRandomSeed": 0, 
+      "randomOffset": 0, 
+      "checkWrite": 0, 
+      "checkRead": 0, 
+      "preallocate": 0, 
+      "useFileView": 0, 
+      "setAlignment": 1, 
+      "storeFileOffset": 0, 
+      "useSharedFilePointer": 0, 
+      "useStridedDatatype": 0, 
+      "keepFile": 0, 
+      "keepFileWithError": 0, 
+      "quitOnError": 0, 
+      "verbose": 0, 
+      "data packet type": "g", 
+      "setTimeStampSignature/incompressibleSeed": 0, 
+      "collective": 0, 
+      "segmentCount": 25, 
+      "transferSize": 4194304, 
+      "blockSize": 4194304
+    }
+, 
+    "Options": {
+      "api": "POSIX", 
+      "apiVersion": "", 
+      "test filename": "/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/iortest_50gb/pior_s_4m_50gb_n512_2.bin", 
+      "access": "file-per-process", 
+      "type": "independent", 
+      "segments": 25, 
+      "ordering in a file": "sequential", 
+      "ordering inter file": "no tasks offsets", 
+      "nodes": 4, 
+      "tasks": 512, 
+      "clients per node": 128, 
+      "repetitions": 1, 
+      "xfersize": "4 MiB", 
+      "blocksize": "4 MiB", 
+      "aggregate filesize": "50 GiB"
+    }
+, 
+    "Results": [
+      [             {
+        "access": "write", 
+        "bwMiB": 159831.3864, 
+        "blockKiB": 4096.0000, 
+        "xferKiB": 4096.0000, 
+        "iops": 39963.1837, 
+        "latency": 0.1997, 
+        "openTime": 0.0855, 
+        "wrRdTime": 0.3203, 
+        "closeTime": 0.2328, 
+        "totalTime": 0.3203
+      }
+, 
+            {
+        "access": "read", 
+        "bwMiB": 193949.9745, 
+        "blockKiB": 4096.0000, 
+        "xferKiB": 4096.0000, 
+        "iops": 48490.2820, 
+        "latency": 0.0616, 
+        "openTime": 0.0877, 
+        "wrRdTime": 0.2640, 
+        "closeTime": 0.2271, 
+        "totalTime": 0.2640
+      }
+, 
+            {
+        "access": "remove", 
+        "totalTime": 0.2934
+      }
+]
+]
+, 
+  "max": {
+    "writeMiB": 159831.3864, 
+    "writeMB": 167595.3558, 
+    "readMiB": 193949.9745, 
+    "readMB": 203371.2885
+  }
+
+}
+]
+, 
+"summary": [
+{
+  "operation": "write", 
+  "API": "POSIX", 
+  "TestID": 0, 
+  "ReferenceNumber": 0, 
+  "segmentCount": 25, 
+  "blockSize": 4194304, 
+  "transferSize": 4194304, 
+  "numTasks": 512, 
+  "tasksPerNode": 128, 
+  "repetitions": 1, 
+  "filePerProc": 1, 
+  "reorderTasks": 0, 
+  "taskPerNodeOffset": 1, 
+  "reorderTasksRandom": 0, 
+  "reorderTasksRandomSeed": 0, 
+  "segmentCount": 25, 
+  "blockSize": 4194304, 
+  "transferSize": 4194304, 
+  "bwMaxMIB": 159831.3864, 
+  "bwMinMIB": 159831.3864, 
+  "bwMeanMIB": 159831.3864, 
+  "bwStdMIB": 0.0000, 
+  "OPsMax": 39957.8466, 
+  "OPsMin": 39957.8466, 
+  "OPsMean": 39957.8466, 
+  "OPsSD": 0.0000, 
+  "MeanTime": 0.3203, 
+  "xsizeMiB": 51200.0000
+}
+, 
+{
+  "operation": "read", 
+  "API": "POSIX", 
+  "TestID": 0, 
+  "ReferenceNumber": 0, 
+  "segmentCount": 25, 
+  "blockSize": 4194304, 
+  "transferSize": 4194304, 
+  "numTasks": 512, 
+  "tasksPerNode": 128, 
+  "repetitions": 1, 
+  "filePerProc": 1, 
+  "reorderTasks": 0, 
+  "taskPerNodeOffset": 1, 
+  "reorderTasksRandom": 0, 
+  "reorderTasksRandomSeed": 0, 
+  "segmentCount": 25, 
+  "blockSize": 4194304, 
+  "transferSize": 4194304, 
+  "bwMaxMIB": 193949.9745, 
+  "bwMinMIB": 193949.9745, 
+  "bwMeanMIB": 193949.9745, 
+  "bwStdMIB": 0.0000, 
+  "OPsMax": 48487.4936, 
+  "OPsMin": 48487.4936, 
+  "OPsMean": 48487.4936, 
+  "OPsSD": 0.0000, 
+  "MeanTime": 0.2640, 
+  "xsizeMiB": 51200.0000
+}
+]
+, 
+"Finished": "Fri May  2 02:58:05 2025"
+}

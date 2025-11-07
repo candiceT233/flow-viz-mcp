@@ -1,0 +1,13 @@
+{
+    "access_frequency": 2449,
+    "data_volume": 10008658,
+    "file_name": "pposs2ukstu_blue_003_004.fits",
+    "io_blk_range": [
+        0,
+        3250,
+        3250,
+        -1
+    ],
+    "pid": "31339",
+    "task_name": "mBackground"
+}

@@ -1,0 +1,13 @@
+{
+    "access_frequency": 2,
+    "data_volume": 4,
+    "file_name": "cposs2ukstu_blue_003_002.fits",
+    "io_blk_range": [
+        0,
+        0,
+        0,
+        -1
+    ],
+    "pid": "50337",
+    "task_name": "mImgtbl"
+}

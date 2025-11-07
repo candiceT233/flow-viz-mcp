@@ -1,0 +1,4 @@
+total_volume_GB: 4.887800805270672
+producer_writes_count: 24
+consumer_reads_count: 13
+producer_total_volume_GB: 4.346090197563171

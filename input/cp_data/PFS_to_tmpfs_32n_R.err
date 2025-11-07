@@ -1,0 +1,321 @@
+----------------------------------------------------------------------------
+Open MPI has detected that a parameter given to a command line
+option does not match the expected format:
+
+  Option: n
+  Param:  -host
+
+This is frequently caused by omitting to provide the parameter
+to an option that requires one. Please check the command line and try again.
+----------------------------------------------------------------------------
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask2.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask2.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask4.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask4.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask8.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask8.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask16.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask16.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask32.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask32.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask64.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask64.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask64.bin.00000001’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask64.bin.00000001’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000001’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000001’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000002’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000002’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000003’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial1_ntask128.bin.00000003’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask2.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask2.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask4.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask4.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask8.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask8.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask16.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask16.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask32.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask32.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask64.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask64.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask64.bin.00000001’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask64.bin.00000001’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000001’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000001’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000002’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000002’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000003’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial2_ntask128.bin.00000003’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask2.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask2.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask4.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask4.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask8.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask8.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask16.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask16.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask32.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask32.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask64.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask64.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask64.bin.00000001’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask64.bin.00000001’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000000’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000000’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000001’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000001’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000002’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000002’ are the same file
+cp: ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000003’ and ‘/dev/shm/tang584//qfs/projects/datamesh/tang584/linux_resource_detect/io_test/local_copies/1gb_testfile_trial3_ntask128.bin.00000003’ are the same file
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_5gb/shared/reverse_5gb_testfile_trial1_ntask32.bin.00000012’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_5gb/shared/reverse_5gb_testfile_trial1_ntask32.bin.00000012’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_5gb/shared/reverse_5gb_testfile_trial1_ntask32.bin.00000015’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_5gb/shared/reverse_5gb_testfile_trial1_ntask32.bin.00000015’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000074’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000093’
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000074’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000093’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000105’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000105’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000070’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000070’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000007’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000007’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000073’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000073’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000011’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000011’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000079’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000079’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000108’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000108’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000029’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000029’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000123’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000123’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000017’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000017’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000090’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000090’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000099’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000099’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000025’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000025’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000061’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000061’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000004’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000098’
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000004’: Remote I/O error: Remote I/O error
+
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000098’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000038’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000038’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000065’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000024’
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000065’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000024’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000067’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000067’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000106’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000106’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000062’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000062’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000110’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000110’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000047’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000047’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000019’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000019’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000082’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000082’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000014’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000014’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000081’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000081’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000119’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000119’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000000’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000000’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000002’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000002’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000001’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000001’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000003’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000003’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000016’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000016’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000013’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000013’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000008’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000008’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000010’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000010’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000012’: Remote I/O error
+cp: cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000006’failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000012’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000006’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000015’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000005’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000005’: Remote I/O errorcp: 
+failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000015’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000009’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000009’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000023’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000023’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000022’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000022’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000027’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000027’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000028’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000028’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000018’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000018’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000020’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000020’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000026’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000026’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000034’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000034’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000021’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000030’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000021’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000030’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000032’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000032’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000037’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000037’: Remote I/O error
+cp: cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000036’error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000031’: Remote I/O error
+cp: : Remote I/O errorfailed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000036’
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000031’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000035’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000035’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000033’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000033’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000039’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000039’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000042’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000042’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000041’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000041’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000040’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000040’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000044’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000043’
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000044’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000043’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000045’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000045’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000048’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000048’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000046’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000046’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000049’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000049’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000050’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000050’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000051’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000051’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000052’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000052’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000053’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000053’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000054’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000054’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000055’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000055’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000058’: Remote I/O error
+cp: cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000057’failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000058’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000057’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000056’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000056’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000059’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000059’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000063’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000063’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000060’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000060’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000064’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000064’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000069’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000069’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000066’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000066’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000068’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000068’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000072’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000072’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000071’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000071’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000076’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000076’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000075’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000075’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000078’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000078’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000077’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000077’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000084’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000084’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000080’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000080’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000083’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000083’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000085’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000085’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000086’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000086’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000088’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000088’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000095’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000095’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000094’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000094’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000089’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000087’
+cp: cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000092’failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000089’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000087’: Remote I/O error: Remote I/O error
+: Remote I/O error
+
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000092’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000091’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000096’: Remote I/O error: Remote I/O error
+
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000096’cp: : Remote I/O errorfailed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000091’
+: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000101’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000103’
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000101’cp: : Remote I/O error: Remote I/O error
+error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000097’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000102’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000107’: Remote I/O error: Remote I/O error
+
+cp: cp: cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000102’: Remote I/O errorfailed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000097’: Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000100’
+
+: Remote I/O errorcp: 
+failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000107’: Remote I/O error
+
+: Remote I/O errorcp: 
+failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000103’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000100’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000104’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000104’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000117’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000117’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000109’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000111’
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000109’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000111’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000112’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000112’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000116’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000116’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000114’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000113’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000114’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000113’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000115’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000115’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000118’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000118’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000120’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000121’cp: : Remote I/O errorerror writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000122’
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000120’cp: : Remote I/O errorfailed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000121’: Remote I/O error: Remote I/O error
+
+
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000122’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000125’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000125’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000124’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000124’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000126’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000127’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000126’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial1_ntask128.bin.00000127’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask2.bin.00000001’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask2.bin.00000001’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask4.bin.00000001’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask4.bin.00000001’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask4.bin.00000002’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask4.bin.00000002’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask4.bin.00000003’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial2_ntask4.bin.00000003’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask2.bin.00000000’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask2.bin.00000000’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask2.bin.00000001’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask2.bin.00000001’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask4.bin.00000001’cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask4.bin.00000002’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask4.bin.00000001’: Remote I/O error
+: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask4.bin.00000002’: Remote I/O error
+cp: error writing ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask4.bin.00000003’: Remote I/O error
+cp: failed to extend ‘/rcfs/projects/datamesh/tang584/experiments/ior_bench/iortest_50gb/shared/reverse_50gb_testfile_trial3_ntask4.bin.00000003’: Remote I/O error

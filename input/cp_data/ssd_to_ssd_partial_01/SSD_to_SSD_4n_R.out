@@ -1,0 +1,35 @@
+hostlist: dc225,dc226,dc227,dc233,
+vm.drop_caches = 3
+Running 50GB test
+Trial 3 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "3": { "ntasks": 2, "targets": 3, "scp-bw(MB/s)": 111.81 } }
+------------------------------------------------------
+Trial 3 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "3": { "ntasks": 4, "targets": 3, "scp-bw(MB/s)": 111.87 } }
+------------------------------------------------------
+Trial 3 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "3": { "ntasks": 8, "targets": 3, "scp-bw(MB/s)": 111.86 } }
+------------------------------------------------------
+Trial 3 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "3": { "ntasks": 16, "targets": 3, "scp-bw(MB/s)": 111.92 } }
+------------------------------------------------------
+Trial 3 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "3": { "ntasks": 32, "targets": 3, "scp-bw(MB/s)": 111.84 } }
+------------------------------------------------------
+Trial 3 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "3": { "ntasks": 64, "targets": 3, "scp-bw(MB/s)": 111.86 } }
+------------------------------------------------------
+Trial 3 | ntask=128
+Warning: Expected 128 files but found 64.

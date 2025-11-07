@@ -1,0 +1,13 @@
+{
+    "access_frequency": 1212,
+    "data_volume": 4952070,
+    "file_name": "1-diff.000015.000016.fits",
+    "io_blk_range": [
+        0,
+        799,
+        985,
+        -1
+    ],
+    "pid": "3047836",
+    "task_name": "mDiffFit"
+}

@@ -1,0 +1,232 @@
+hostlist: dc034,dc035,dc037,dc057,
+vm.drop_caches = 3
+Running 1GB test
+Trial 1 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "1": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 99.27 } }
+------------------------------------------------------
+Trial 1 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "1": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 105.37 } }
+------------------------------------------------------
+Trial 1 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "1": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 105.03 } }
+------------------------------------------------------
+Trial 1 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "1": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 103.33 } }
+------------------------------------------------------
+Trial 1 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "1": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 103.39 } }
+------------------------------------------------------
+Trial 1 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "1": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 105.29 } }
+------------------------------------------------------
+Trial 1 | ntask=128
+Warning: Expected 128 files but found 64.
+Trial 2 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "2": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 103.61 } }
+------------------------------------------------------
+Trial 2 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "2": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 105.84 } }
+------------------------------------------------------
+Trial 2 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "2": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 105.66 } }
+------------------------------------------------------
+Trial 2 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "2": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 105.72 } }
+------------------------------------------------------
+Trial 2 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "2": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 102.57 } }
+------------------------------------------------------
+Trial 2 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "2": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 102.61 } }
+------------------------------------------------------
+Trial 2 | ntask=128
+Warning: Expected 128 files but found 64.
+Trial 3 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "3": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 106.03 } }
+------------------------------------------------------
+Trial 3 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "3": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 105.58 } }
+------------------------------------------------------
+Trial 3 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "3": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 106.01 } }
+------------------------------------------------------
+Trial 3 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "3": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 106.12 } }
+------------------------------------------------------
+Trial 3 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "3": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 104.82 } }
+------------------------------------------------------
+Trial 3 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "1024MB", "3": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 103.86 } }
+------------------------------------------------------
+Trial 3 | ntask=128
+Warning: Expected 128 files but found 64.
+Running 5GB test
+Trial 1 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "1": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 110.28 } }
+------------------------------------------------------
+Trial 1 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "1": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 110.44 } }
+------------------------------------------------------
+Trial 1 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "1": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 109.70 } }
+------------------------------------------------------
+Trial 1 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "1": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 110.50 } }
+------------------------------------------------------
+Trial 1 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "1": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 110.47 } }
+------------------------------------------------------
+Trial 1 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "1": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 110.21 } }
+------------------------------------------------------
+Trial 1 | ntask=128
+Warning: Expected 128 files but found 64.
+Trial 2 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "2": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 110.64 } }
+------------------------------------------------------
+Trial 2 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "2": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 107.33 } }
+------------------------------------------------------
+Trial 2 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "2": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 108.97 } }
+------------------------------------------------------
+Trial 2 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "2": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 109.68 } }
+------------------------------------------------------
+Trial 2 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "2": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 110.48 } }
+------------------------------------------------------
+Trial 2 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "2": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 110.37 } }
+------------------------------------------------------
+Trial 2 | ntask=128
+Warning: Expected 128 files but found 64.
+Trial 3 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "3": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 110.37 } }
+------------------------------------------------------
+Trial 3 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "3": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 110.41 } }
+------------------------------------------------------
+Trial 3 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "3": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 110.06 } }
+------------------------------------------------------
+Trial 3 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "3": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 110.41 } }
+------------------------------------------------------
+Trial 3 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "3": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 110.29 } }
+------------------------------------------------------
+Trial 3 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "5120MB", "3": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 109.86 } }
+------------------------------------------------------
+Trial 3 | ntask=128
+Warning: Expected 128 files but found 64.
+Running 50GB test
+Trial 1 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "1": { "ntasks": 2, "targets": 3, "local-to-local-bw(MB/s)": 111.95 } }
+------------------------------------------------------
+Trial 1 | ntask=4
+Generated 4 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "1": { "ntasks": 4, "targets": 3, "local-to-local-bw(MB/s)": 111.63 } }
+------------------------------------------------------
+Trial 1 | ntask=8
+Generated 8 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "1": { "ntasks": 8, "targets": 3, "local-to-local-bw(MB/s)": 111.62 } }
+------------------------------------------------------
+Trial 1 | ntask=16
+Generated 16 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "1": { "ntasks": 16, "targets": 3, "local-to-local-bw(MB/s)": 111.87 } }
+------------------------------------------------------
+Trial 1 | ntask=32
+Generated 32 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "1": { "ntasks": 32, "targets": 3, "local-to-local-bw(MB/s)": 111.65 } }
+------------------------------------------------------
+Trial 1 | ntask=64
+Generated 64 files.
+Starting parallel SCP to other nodes -----------------------------
+{ "filesize": "51200MB", "1": { "ntasks": 64, "targets": 3, "local-to-local-bw(MB/s)": 111.75 } }
+------------------------------------------------------
+Trial 1 | ntask=128
+Warning: Expected 128 files but found 64.
+Trial 2 | ntask=2
+Generated 2 files.
+Starting parallel SCP to other nodes -----------------------------

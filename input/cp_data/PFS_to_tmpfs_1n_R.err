@@ -1,0 +1,11 @@
+----------------------------------------------------------------------------
+Open MPI has detected that a parameter given to a command line
+option does not match the expected format:
+
+  Option: n
+  Param:  -host
+
+This is frequently caused by omitting to provide the parameter
+to an option that requires one. Please check the command line and try again.
+----------------------------------------------------------------------------
+slurmstepd: error: *** JOB 9268747 ON dc148 CANCELLED AT 2025-05-30T13:00:04 DUE TO TIME LIMIT ***

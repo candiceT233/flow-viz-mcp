@@ -1,0 +1,13 @@
+{
+    "access_frequency": 1214,
+    "data_volume": 4952074,
+    "file_name": "pposs2ukstu_blue_004_002.fits",
+    "io_blk_range": [
+        0,
+        980,
+        980,
+        -1
+    ],
+    "pid": "3272048",
+    "task_name": "mDiffFit"
+}

@@ -1,0 +1,15 @@
+[project]
+name = "dfl-mcp"
+version = "0.1.0"
+dependencies = [
+    "networkx",
+    "fastmcp",
+    "matplotlib",
+    "pydot",
+    "pandas",
+    "plotly",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

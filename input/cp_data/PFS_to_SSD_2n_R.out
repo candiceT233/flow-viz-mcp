@@ -1,0 +1,719 @@
+hostlist: dc155,dc158,
+vm.drop_caches = 3
+Running 1GB test
+Trial 1 | ntask=2
+Generating 2 files using IOR...
+vm.drop_caches = 3
+Generated 2 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 2 files took .670858997 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 2 files took 2.199472822 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 2, "shared-to-local-bw(MB/s)": 1526.40, "local-to-share-bw(MB/s)": 465.57 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=4
+Generating 4 files using IOR...
+vm.drop_caches = 3
+Generated 4 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 4 files took .362899877 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 4 files took 2.008496132 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 4, "shared-to-local-bw(MB/s)": 2821.71, "local-to-share-bw(MB/s)": 509.83 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=8
+Generating 8 files using IOR...
+vm.drop_caches = 3
+Generated 8 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 8 files took .217257417 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 8 files took 1.949409796 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 8, "shared-to-local-bw(MB/s)": 4713.30, "local-to-share-bw(MB/s)": 525.29 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=16
+Generating 16 files using IOR...
+vm.drop_caches = 3
+Generated 16 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 16 files took .145003829 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 16 files took 1.926665396 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 16, "shared-to-local-bw(MB/s)": 7061.88, "local-to-share-bw(MB/s)": 531.49 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=32
+Generating 32 files using IOR...
+vm.drop_caches = 3
+Generated 32 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 32 files took .125970374 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 32 files took 1.914516486 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 32, "shared-to-local-bw(MB/s)": 8128.90, "local-to-share-bw(MB/s)": 534.86 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=64
+Generating 64 files using IOR...
+vm.drop_caches = 3
+Generated 64 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 64 files took .164922771 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 64 files took 1.953251316 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 64, "shared-to-local-bw(MB/s)": 6208.97, "local-to-share-bw(MB/s)": 524.25 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=128
+Generating 128 files using IOR...
+vm.drop_caches = 3
+Generated 128 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 128 files took .215045541 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 128 files took 1.912401568 seconds
+{ "filesize": "1024MB", "1": { "ntasks": 128, "shared-to-local-bw(MB/s)": 4761.78, "local-to-share-bw(MB/s)": 535.45 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=2
+Generating 2 files using IOR...
+vm.drop_caches = 3
+Generated 2 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 2 files took .759297652 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 2 files took 2.189528088 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 2, "shared-to-local-bw(MB/s)": 1348.61, "local-to-share-bw(MB/s)": 467.68 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=4
+Generating 4 files using IOR...
+vm.drop_caches = 3
+Generated 4 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 4 files took .424544684 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 4 files took 2.013298657 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 4, "shared-to-local-bw(MB/s)": 2412.00, "local-to-share-bw(MB/s)": 508.62 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=8
+Generating 8 files using IOR...
+vm.drop_caches = 3
+Generated 8 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 8 files took .212204893 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 8 files took 2.366841934 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 8, "shared-to-local-bw(MB/s)": 4825.52, "local-to-share-bw(MB/s)": 432.64 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=16
+Generating 16 files using IOR...
+vm.drop_caches = 3
+Generated 16 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 16 files took .138266922 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 16 files took 1.929624484 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 16, "shared-to-local-bw(MB/s)": 7405.97, "local-to-share-bw(MB/s)": 530.67 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=32
+Generating 32 files using IOR...
+vm.drop_caches = 3
+Generated 32 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 32 files took .131863319 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 32 files took 1.914679098 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 32, "shared-to-local-bw(MB/s)": 7765.62, "local-to-share-bw(MB/s)": 534.82 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=64
+Generating 64 files using IOR...
+vm.drop_caches = 3
+Generated 64 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 64 files took .154331021 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 64 files took 1.910504462 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 64, "shared-to-local-bw(MB/s)": 6635.09, "local-to-share-bw(MB/s)": 535.98 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=128
+Generating 128 files using IOR...
+vm.drop_caches = 3
+Generated 128 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 128 files took .231082317 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 128 files took 1.914429992 seconds
+{ "filesize": "1024MB", "2": { "ntasks": 128, "shared-to-local-bw(MB/s)": 4431.32, "local-to-share-bw(MB/s)": 534.89 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=2
+Generating 2 files using IOR...
+vm.drop_caches = 3
+Generated 2 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 2 files took .729395549 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 2 files took 2.202579520 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 2, "shared-to-local-bw(MB/s)": 1403.90, "local-to-share-bw(MB/s)": 464.91 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=4
+Generating 4 files using IOR...
+vm.drop_caches = 3
+Generated 4 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 4 files took .399803166 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 4 files took 2.012890559 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 4, "shared-to-local-bw(MB/s)": 2561.26, "local-to-share-bw(MB/s)": 508.72 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=8
+Generating 8 files using IOR...
+vm.drop_caches = 3
+Generated 8 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 8 files took .216306601 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 8 files took 1.950060293 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 8, "shared-to-local-bw(MB/s)": 4734.02, "local-to-share-bw(MB/s)": 525.11 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=16
+Generating 16 files using IOR...
+vm.drop_caches = 3
+Generated 16 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 16 files took .139263458 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 16 files took 1.929002039 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 16, "shared-to-local-bw(MB/s)": 7352.97, "local-to-share-bw(MB/s)": 530.84 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=32
+Generating 32 files using IOR...
+vm.drop_caches = 3
+Generated 32 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 32 files took .123948619 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 32 files took 1.915917955 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 32, "shared-to-local-bw(MB/s)": 8261.49, "local-to-share-bw(MB/s)": 534.47 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=64
+Generating 64 files using IOR...
+vm.drop_caches = 3
+Generated 64 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 64 files took .158423811 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 64 files took 1.911716612 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 64, "shared-to-local-bw(MB/s)": 6463.67, "local-to-share-bw(MB/s)": 535.64 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=128
+Generating 128 files using IOR...
+vm.drop_caches = 3
+Generated 128 files.
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 128 files took .209621559 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 128 files took 1.912264835 seconds
+{ "filesize": "1024MB", "3": { "ntasks": 128, "shared-to-local-bw(MB/s)": 4884.99, "local-to-share-bw(MB/s)": 535.49 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Running 5GB test
+Trial 1 | ntask=2
+Generating 2 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 2 files took 3.626473599 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 2 files took 12.478029943 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 2, "shared-to-local-bw(MB/s)": 282.37, "local-to-share-bw(MB/s)": 82.06 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=4
+Generating 4 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 4 files took 1.962297706 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 4 files took 10.090633463 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 4, "shared-to-local-bw(MB/s)": 521.84, "local-to-share-bw(MB/s)": 101.48 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=8
+Generating 8 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 8 files took .997320650 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 8 files took 9.741865687 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 8, "shared-to-local-bw(MB/s)": 1026.75, "local-to-share-bw(MB/s)": 105.11 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=16
+Generating 16 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 16 files took .559222802 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 16 files took 10.435906065 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 16, "shared-to-local-bw(MB/s)": 1831.11, "local-to-share-bw(MB/s)": 98.12 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=32
+Generating 32 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 32 files took .545923124 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 32 files took 9.518131803 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 32, "shared-to-local-bw(MB/s)": 1875.72, "local-to-share-bw(MB/s)": 107.58 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=64
+Generating 64 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 64 files took .543360572 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 64 files took 9.506231082 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 64, "shared-to-local-bw(MB/s)": 1884.57, "local-to-share-bw(MB/s)": 107.72 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=128
+Generating 128 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 128 files took .543013168 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 128 files took 10.204345923 seconds
+{ "filesize": "5120MB", "1": { "ntasks": 128, "shared-to-local-bw(MB/s)": 1885.77, "local-to-share-bw(MB/s)": 100.35 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=2
+Generating 2 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 2 files took 3.887630615 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 2 files took 11.170837841 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 2, "shared-to-local-bw(MB/s)": 263.40, "local-to-share-bw(MB/s)": 91.67 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=4
+Generating 4 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 4 files took 2.033445405 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 4 files took 10.148214921 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 4, "shared-to-local-bw(MB/s)": 503.58, "local-to-share-bw(MB/s)": 100.90 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=8
+Generating 8 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 8 files took 1.074849272 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 8 files took 10.565661574 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 8, "shared-to-local-bw(MB/s)": 952.69, "local-to-share-bw(MB/s)": 96.92 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=16
+Generating 16 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 16 files took .559706296 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 16 files took 9.597555724 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 16, "shared-to-local-bw(MB/s)": 1829.53, "local-to-share-bw(MB/s)": 106.69 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=32
+Generating 32 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 32 files took .538232665 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 32 files took 9.515562682 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 32, "shared-to-local-bw(MB/s)": 1902.52, "local-to-share-bw(MB/s)": 107.61 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=64
+Generating 64 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 64 files took .544333615 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 64 files took 9.515114449 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 64, "shared-to-local-bw(MB/s)": 1881.20, "local-to-share-bw(MB/s)": 107.62 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=128
+Generating 128 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 128 files took .547537283 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 128 files took 9.502292338 seconds
+{ "filesize": "5120MB", "2": { "ntasks": 128, "shared-to-local-bw(MB/s)": 1870.19, "local-to-share-bw(MB/s)": 107.76 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=2
+Generating 2 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 2 files took 4.264792240 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 2 files took 11.283514910 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 2, "shared-to-local-bw(MB/s)": 240.11, "local-to-share-bw(MB/s)": 90.75 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=4
+Generating 4 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 4 files took 1.915012633 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 4 files took 10.102029128 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 4, "shared-to-local-bw(MB/s)": 534.72, "local-to-share-bw(MB/s)": 101.37 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=8
+Generating 8 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 8 files took .944552639 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 8 files took 9.746670205 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 8, "shared-to-local-bw(MB/s)": 1084.11, "local-to-share-bw(MB/s)": 105.06 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=16
+Generating 16 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 16 files took .561245222 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 16 files took 9.850061169 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 16, "shared-to-local-bw(MB/s)": 1824.51, "local-to-share-bw(MB/s)": 103.96 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=32
+Generating 32 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 32 files took .537627173 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 32 files took 9.550619952 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 32, "shared-to-local-bw(MB/s)": 1904.67, "local-to-share-bw(MB/s)": 107.22 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=64
+Generating 64 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 64 files took .537527464 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 64 files took 9.565312924 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 64, "shared-to-local-bw(MB/s)": 1905.02, "local-to-share-bw(MB/s)": 107.05 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=128
+Generating 128 files using IOR for 5GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 128 files took .543153271 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 128 files took 10.048068657 seconds
+{ "filesize": "5120MB", "3": { "ntasks": 128, "shared-to-local-bw(MB/s)": 1885.29, "local-to-share-bw(MB/s)": 101.91 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Running 50GB test
+Trial 1 | ntask=2
+Generating 2 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 2 files took 110.922116455 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 2 files took 111.867287336 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 2, "shared-to-local-bw(MB/s)": 9.23, "local-to-share-bw(MB/s)": 9.15 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=4
+Generating 4 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 4 files took 113.561910492 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 4 files took 101.552222778 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 4, "shared-to-local-bw(MB/s)": 9.02, "local-to-share-bw(MB/s)": 10.08 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=8
+Generating 8 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 8 files took 114.435522575 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 8 files took 98.243005033 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 8, "shared-to-local-bw(MB/s)": 8.95, "local-to-share-bw(MB/s)": 10.42 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=16
+Generating 16 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 16 files took 123.474624804 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 16 files took 96.755538878 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 16, "shared-to-local-bw(MB/s)": 8.29, "local-to-share-bw(MB/s)": 10.58 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=32
+Generating 32 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 32 files took 82.084831953 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 32 files took 95.182301016 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 32, "shared-to-local-bw(MB/s)": 12.47, "local-to-share-bw(MB/s)": 10.76 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=64
+Generating 64 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 64 files took 86.709151480 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 64 files took 95.149212532 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 64, "shared-to-local-bw(MB/s)": 11.81, "local-to-share-bw(MB/s)": 10.76 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 1 | ntask=128
+Generating 128 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[1] cp shared→local of 128 files took 85.899919221 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[1] cp local→shared of 128 files took 95.296582010 seconds
+{ "filesize": "51200MB", "1": { "ntasks": 128, "shared-to-local-bw(MB/s)": 11.92, "local-to-share-bw(MB/s)": 10.75 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=2
+Generating 2 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 2 files took 116.739760570 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 2 files took 114.379623019 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 2, "shared-to-local-bw(MB/s)": 8.77, "local-to-share-bw(MB/s)": 8.95 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=4
+Generating 4 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 4 files took 95.136091980 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 4 files took 101.426483562 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 4, "shared-to-local-bw(MB/s)": 10.76, "local-to-share-bw(MB/s)": 10.10 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=8
+Generating 8 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 8 files took 96.784696120 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 8 files took 98.165233018 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 8, "shared-to-local-bw(MB/s)": 10.58, "local-to-share-bw(MB/s)": 10.43 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=16
+Generating 16 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 16 files took 96.320393277 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 16 files took 96.684859526 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 16, "shared-to-local-bw(MB/s)": 10.63, "local-to-share-bw(MB/s)": 10.59 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=32
+Generating 32 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 32 files took 85.226000537 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 32 files took 95.190278255 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 32, "shared-to-local-bw(MB/s)": 12.02, "local-to-share-bw(MB/s)": 10.76 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=64
+Generating 64 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 64 files took 85.158068664 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 64 files took 95.125192435 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 64, "shared-to-local-bw(MB/s)": 12.02, "local-to-share-bw(MB/s)": 10.76 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 2 | ntask=128
+Generating 128 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[2] cp shared→local of 128 files took 107.737677382 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[2] cp local→shared of 128 files took 95.102722974 seconds
+{ "filesize": "51200MB", "2": { "ntasks": 128, "shared-to-local-bw(MB/s)": 9.50, "local-to-share-bw(MB/s)": 10.77 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=2
+Generating 2 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 2 files took 92.631400154 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 2 files took 113.453772431 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 2, "shared-to-local-bw(MB/s)": 11.05, "local-to-share-bw(MB/s)": 9.03 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=4
+Generating 4 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 4 files took 93.938035841 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 4 files took 101.557438385 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 4, "shared-to-local-bw(MB/s)": 10.90, "local-to-share-bw(MB/s)": 10.08 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=8
+Generating 8 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 8 files took 112.879426841 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 8 files took 98.417117230 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 8, "shared-to-local-bw(MB/s)": 9.07, "local-to-share-bw(MB/s)": 10.40 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=16
+Generating 16 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 16 files took 89.256499860 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 16 files took 96.708027217 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 16, "shared-to-local-bw(MB/s)": 11.47, "local-to-share-bw(MB/s)": 10.59 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=32
+Generating 32 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 32 files took 82.737552768 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 32 files took 95.134184873 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 32, "shared-to-local-bw(MB/s)": 12.38, "local-to-share-bw(MB/s)": 10.76 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=64
+Generating 64 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 64 files took 98.879149571 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 64 files took 94.960988987 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 64, "shared-to-local-bw(MB/s)": 10.36, "local-to-share-bw(MB/s)": 10.78 } }
+------------------------------------------------------
+vm.drop_caches = 3
+Trial 3 | ntask=128
+Generating 128 files using IOR for 50GB total...
+vm.drop_caches = 3
+Starting parallel cp from shared to local -----------------------------
+Trial[3] cp shared→local of 128 files took 98.790521422 seconds
+vm.drop_caches = 3
+Starting parallel cp from local to shared -----------------------------
+Trial[3] cp local→shared of 128 files took 95.733868726 seconds
+{ "filesize": "51200MB", "3": { "ntasks": 128, "shared-to-local-bw(MB/s)": 10.37, "local-to-share-bw(MB/s)": 10.70 } }
+------------------------------------------------------
+vm.drop_caches = 3

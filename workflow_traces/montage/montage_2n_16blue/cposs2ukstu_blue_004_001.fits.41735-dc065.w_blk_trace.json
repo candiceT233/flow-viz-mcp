@@ -1,0 +1,13 @@
+{
+    "access_frequency": 3194,
+    "data_volume": 13080192,
+    "file_name": "cposs2ukstu_blue_004_001.fits",
+    "io_blk_range": [
+        0,
+        3249,
+        3249,
+        -1
+    ],
+    "pid": "41735",
+    "task_name": "mBackground"
+}
