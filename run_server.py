@@ -1,7 +1,9 @@
 import argparse
 from src.dfl_mcp.server import DFLVisualizationMCP
 
-if __name__ == "__main__":
+
+def main():
+    """Main entry point for the MCP server."""
     parser = argparse.ArgumentParser(description="Run the DFL Visualization MCP server.")
     parser.add_argument(
         "--workflow-name",
@@ -13,3 +15,7 @@ if __name__ == "__main__":
 
     server = DFLVisualizationMCP(workflow_name=workflow_name)
     server.run()
+
+
+if __name__ == "__main__":
+    main()

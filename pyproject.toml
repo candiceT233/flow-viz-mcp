@@ -1,6 +1,7 @@
 [project]
 name = "dfl-mcp"
 version = "0.1.0"
+requires-python = ">=3.10"
 dependencies = [
     "networkx",
     "fastmcp",
@@ -8,7 +9,14 @@ dependencies = [
     "pydot",
     "pandas",
     "plotly",
+    "fastapi",
+    "uvicorn[standard]",
+    "sse-starlette",
 ]
+
+[project.scripts]
+dfl-mcp-server = "run_server:main"
+dfl-mcp-server-http = "run_server_http:main"
 
 [build-system]
 requires = ["setuptools"]

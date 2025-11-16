@@ -4,8 +4,28 @@ This project implements a Model Context Protocol (MCP) server for visualizing an
 
 ## Installation
 
-1.  Create a virtual environment using `uv`:
+**Prerequisites:**
+- Python 3.10 or higher (required by fastmcp)
+- `uv` package manager (recommended) - Install with: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+**Option 1: Using `uv` (Recommended)**
+
+`uv` automatically manages the virtual environment and dependencies:
+
+```bash
+# Install dependencies (uv will create venv automatically)
+uv sync
+
+# Or install in development mode
+uv pip install -e .
+```
+
+**Option 2: Using traditional Python tools**
+
+1.  Create a virtual environment:
     ```bash
+    python -m venv .venv
+    # or with uv:
     uv venv
     ```
 
@@ -55,11 +75,31 @@ The MCP server is designed to work with LLM applications that support the Model 
 
 #### Running the MCP Server
 
-Start the server with:
+**Option 1: Using `uv run` (Recommended)**
 
+Start the stdio server with:
+```bash
+uv run run_server.py
+```
+
+Or start the HTTP server with:
+```bash
+uv run run_server_http.py --host localhost --port 8000
+```
+
+**Option 2: Using Python directly**
+
+Start the stdio server with:
 ```bash
 python run_server.py
 ```
+
+Or start the HTTP server with:
+```bash
+python run_server_http.py --host localhost --port 8000
+```
+
+**Note:** Using `uv run` automatically manages the virtual environment and dependencies. Make sure you have `uv` installed: `curl -LsSf https://astral.sh/uv/install.sh | sh`
 
 The server will start and wait for an MCP client to connect. On startup, it:
 - Discovers all available workflows in `workflow_traces/`
@@ -78,6 +118,20 @@ To use the DFL Visualization tools directly in Claude Desktop conversations:
    **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
    **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
+   **Using `uv run` (Recommended):**
+   ```json
+   {
+     "mcpServers": {
+       "dfl-visualization": {
+         "command": "uv",
+         "args": ["run", "run_server.py"],
+         "cwd": "<path-to-your-project-directory>"
+       }
+     }
+   }
+   ```
+   
+   **Alternative using Python directly:**
    ```json
    {
      "mcpServers": {
@@ -102,26 +156,47 @@ To use the DFL Visualization tools directly in Claude Desktop conversations:
    - "Analyze the critical path using volume as the metric"
    - "Show me flow statistics for tasks openmm_0 through openmm_3"
 
+#### Cursor IDE Integration
+
+To use the DFL Visualization tools with Cursor IDE's AI agent, see the **[Integration Guide](docs/INTEGRATION_GUIDE.md#cursor-ide-integration)** for detailed step-by-step instructions.
+
+**Quick Summary:**
+- **File to Edit:** `~/.cursor/mcp.json` (or Cursor's globalStorage location)
+- **Configuration:** Add MCP server configuration with absolute paths
+- **Expected Output:** Tools available in Cursor's AI chat (Cmd+L or Ctrl+L)
+
+#### Gemini Terminal Agent Integration
+
+To use the DFL Visualization tools with terminal agents like Gemini (via `aider` or similar MCP-compatible tools), see the **[Integration Guide](docs/INTEGRATION_GUIDE.md#gemini-terminal-agent-integration)** for detailed step-by-step instructions.
+
+**Quick Summary:**
+- **File to Edit:** `~/.aider/config.json` (or your terminal agent's config file)
+- **Configuration:** Add MCP server configuration or use environment variables
+- **Expected Output:** Tools available when querying the terminal agent
+
 #### Other MCP-Compatible Tools
 
 The server also works with:
-- **Cursor IDE** - Configure in Cursor settings
 - **Cline** - VS Code extension for Claude
-- **Other MCP clients** - Any tool supporting the Model Context Protocol
+- **Any MCP client** - Any tool supporting the Model Context Protocol (stdio transport)
 
 ### Configuration
 
 To use this tool effectively, you may need to edit the following files and values:
 
-1.  **Claude Desktop Configuration (`claude_desktop_config.json`)**:
-    *   **File**: `~/.config/Claude/claude_desktop_config.json` (Linux), `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS), or `%APPDATA%\Claude\claude_desktop_config.json` (Windows).
-    *   **Values to Edit**:
+1.  **MCP Client Configuration Files**:
+    *   For detailed configuration instructions for each client, see the **[Integration Guide](docs/INTEGRATION_GUIDE.md)**.
+    *   **Claude Desktop**: `claude_desktop_config.json` (see Claude Desktop Integration section above)
+    *   **Cursor IDE**: `mcp.json` (see [Integration Guide - Cursor IDE](docs/INTEGRATION_GUIDE.md#cursor-ide-integration))
+    *   **Terminal Agents**: Agent-specific config files (see [Integration Guide - Gemini Terminal Agent](docs/INTEGRATION_GUIDE.md#gemini-terminal-agent-integration))
+    *   **Common Values to Edit**:
         *   `"args": ["<path-to-your-project-directory>/run_server.py"]`: Update `<path-to-your-project-directory>` to the absolute path where you have cloned this repository.
         *   `"cwd": "<path-to-your-project-directory>"`: Update `<path-to-your-project-directory>` to the absolute path of this repository.
         *   `"PATH": "<path-to-your-project-directory>/.venv/bin:${PATH}"`: Update `<path-to-your-project-directory>` to the absolute path of this repository.
 
 2.  **Workflow Traces (`workflow_traces/`)**:
     *   **File**: This is a directory where you place your workflow-specific data.
+    *   **Location**: `<path-to-your-project-directory>/workflow_traces/`
     *   **Values to Edit**: You will add subdirectories here, each representing a workflow. Inside each workflow directory, you'll place your schema (`*_schema.json`) and trace files (e.g., `*.BlockTrace.json`, `*.DatalifeTrace.json`). Refer to the "Available Workflows" section for the expected structure.
 
 ### Option 3: MCP Inspector (For Development & Testing)
@@ -178,7 +253,8 @@ The system automatically discovers all workflows on startup.
 flow-viz-mcp/
  README.md                          # Project overview and usage guide
  interactive_cli.py                 # Interactive command-line interface
- run_server.py                      # MCP server launcher
+ run_server.py                      # MCP server launcher (stdio)
+ run_server_http.py                 # MCP server launcher (HTTP/SSE)
  run_client.py                      # Example MCP client
  pyproject.toml                     # Python project configuration
 
@@ -222,6 +298,7 @@ flow-viz-mcp/
 
 ## Documentation
 
+- **[Integration Guide](docs/INTEGRATION_GUIDE.md)** - Step-by-step instructions for integrating with Cursor IDE, Gemini terminal agents, and other MCP-compatible clients
 - **[Task Filtering Guide](docs/FILTERING_GUIDE.md)** - Comprehensive guide on how to specify tasks for filtering and visualization, including input formats, examples, and common use cases
 - **[Workflow Structure Guide](docs/workflow_structure.md)** - Required directory structure and naming conventions for adding new workflow traces
 - **[Technical Specification](docs/spec.md)** - Complete technical specification including system architecture, data models, and implementation details
