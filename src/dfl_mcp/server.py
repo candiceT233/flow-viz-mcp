@@ -5,7 +5,7 @@ from .graph_builder import build_dfl_dag
 from .config import INPUT_DIR
 from .analysis.sankey_utils import filter_subgraph, create_sankey_html
 from .analysis.metrics import calculate_flow_summary_stats
-from .analysis.task_ordering import get_topological_task_order, get_tasks_in_range
+from .analysis.task_ordering import get_topological_task_order, get_tasks_in_range, get_tasks_by_stage_numbers, get_stage_info
 import os
 
 from fastmcp.tools.tool import Tool
@@ -37,6 +37,7 @@ class DFLVisualizationMCP(FastMCP):
         self.add_tool(Tool.from_function(self.get_flow_summary_stats))
         self.add_tool(Tool.from_function(self.analyze_critical_path))
         self.add_tool(Tool.from_function(self.adjust_sankey_canvas_size))
+        self.add_tool(Tool.from_function(self.list_workflow_stages))
     
     def adjust_sankey_canvas_size(self, width: int, height: int, font_size: int = 10, node_pad: int = 15, transform_link_value: bool = True) -> str:
         """
@@ -99,6 +100,8 @@ class DFLVisualizationMCP(FastMCP):
         print("  - get_sankey_data")
         print("  - get_flow_summary_stats")
         print("  - analyze_critical_path")
+        print("  - adjust_sankey_canvas_size")
+        print("  - list_workflow_stages")
         print("\n" + "="*60 + "\n")
 
     def _load_workflow(self, workflow_name: str):
@@ -170,39 +173,54 @@ class DFLVisualizationMCP(FastMCP):
         
         return dag
 
-    def get_sankey_data(self, workflow_name: str, start_task_id: str = None, end_task_id: str = None, selected_files: List[str] = [], metric: str = 'volume', output_file: str = 'sankey.html', highlight_critical_path: bool = True, font_size: int = 10, node_pad: int = 15, transform_link_value: bool = True) -> str:
+    def get_sankey_data(self, workflow_name: str, start_task_id: str = None, end_task_id: str = None, selected_tasks: List[str] = [], stage_numbers: List[int] = None, selected_files: List[str] = [], metric: str = 'volume', output_file: str = 'sankey.html', highlight_critical_path: bool = True, font_size: int = 10, node_pad: int = 15, transform_link_value: bool = True) -> str:
         """
         Generates a Sankey diagram as an HTML file for the specified workflow.
 
         Args:
             workflow_name: The name of the workflow to visualize (required).
-            start_task_id: Optional starting task ID for range filtering.
-            end_task_id: Optional ending task ID for range filtering.
+            start_task_id: Optional starting task ID for range filtering (e.g., 'openmm_0').
+            end_task_id: Optional ending task ID for range filtering (e.g., 'training_0').
+            selected_tasks: Optional list of specific task IDs to include (e.g., ['openmm_0', 'openmm_1']).
+            stage_numbers: Optional list of stage numbers to include (0-based, e.g., [0, 1] for stages 1 and 2).
             selected_files: A list of selected file IDs (optional).
-            metric: The edge attribute to use for the flow value (e.g., 'volume', 'op_count', 'rate').
+            metric: The edge attribute to use for the flow value ('volume', 'op_count', or 'rate').
             output_file: The name of the output HTML file.
             highlight_critical_path: Whether to highlight the critical path in orange (default: True).
+            font_size: Font size for labels (default: 10).
+            node_pad: Padding between nodes (default: 15).
+            transform_link_value: Whether to transform link values for display (default: True).
 
         Returns:
             A message with the path to the generated HTML file and task ordering info.
+            
+        Note: Filtering priority: stage_numbers > selected_tasks > start_task_id/end_task_id > all tasks
         """
         # Load the workflow
         dag = self._load_workflow(workflow_name)
         
-        # Determine which tasks to include
-        selected_tasks = []
-        if start_task_id or end_task_id:
-            # If only one boundary is provided, treat it as a single task filter
+        # Determine which tasks to include (priority: stage_numbers > selected_tasks > start/end range)
+        tasks_to_include = []
+        
+        if stage_numbers is not None and len(stage_numbers) > 0:
+            # Filter by stage numbers (highest priority)
+            tasks_to_include = get_tasks_by_stage_numbers(dag, stage_numbers)
+        elif selected_tasks and len(selected_tasks) > 0:
+            # Use explicitly selected tasks
+            tasks_to_include = selected_tasks
+        elif start_task_id or end_task_id:
+            # Use range filtering
             if start_task_id and not end_task_id:
-                selected_tasks = [start_task_id]
+                tasks_to_include = [start_task_id]
             elif end_task_id and not start_task_id:
-                selected_tasks = [end_task_id]
+                tasks_to_include = [end_task_id]
             else:
                 # Both provided - get the range
-                selected_tasks = get_tasks_in_range(dag, start_task_id, end_task_id)
+                tasks_to_include = get_tasks_in_range(dag, start_task_id, end_task_id)
+        # else: tasks_to_include remains empty, which means all tasks
         
         # Filter the graph
-        subgraph = filter_subgraph(dag, selected_tasks, selected_files)
+        subgraph = filter_subgraph(dag, tasks_to_include, selected_files)
         
         # Calculate critical path if highlighting is enabled
         critical_path_edges = None
@@ -228,10 +246,12 @@ class DFLVisualizationMCP(FastMCP):
         
         # Build response message
         response = f"Sankey diagram saved to {output_path}"
-        if selected_tasks:
-            response += f"\nFiltered tasks ({len(selected_tasks)}): {', '.join(selected_tasks[:5])}"
-            if len(selected_tasks) > 5:
-                response += f" ... and {len(selected_tasks) - 5} more"
+        if tasks_to_include:
+            response += f"\nFiltered tasks ({len(tasks_to_include)}): {', '.join(tasks_to_include[:5])}"
+            if len(tasks_to_include) > 5:
+                response += f" ... and {len(tasks_to_include) - 5} more"
+            if stage_numbers is not None:
+                response += f"\nStages included: {', '.join(map(str, stage_numbers))}"
         else:
             # Get all tasks for full workflow
             all_tasks = get_topological_task_order(dag)
@@ -288,4 +308,32 @@ class DFLVisualizationMCP(FastMCP):
             "critical_path_nodes": critical_path_nodes,
             "total_critical_weight": total_critical_weight,
             "opportunities": opportunities
+        }
+
+    def list_workflow_stages(self, workflow_name: str) -> dict:
+        """
+        Lists all stages in the workflow with their tasks and instance counts.
+        Useful for understanding the workflow structure before filtering.
+
+        Args:
+            workflow_name: The name of the workflow to analyze (required).
+
+        Returns:
+            A dictionary containing stage information with task names and counts.
+        """
+        dag = self._load_workflow(workflow_name)
+        stage_info = get_stage_info(dag)
+        
+        # Format the response
+        formatted_stages = {}
+        for stage_num, tasks in sorted(stage_info.items()):
+            formatted_stages[f"Stage {stage_num + 1}"] = {
+                task_name: f"{count} instance(s)" for task_name, count in tasks
+            }
+        
+        return {
+            "workflow_name": workflow_name,
+            "total_stages": len(stage_info),
+            "stages": formatted_stages,
+            "note": "Stage numbers in API are 0-based (use [0, 1] for stages 1 and 2)"
         }

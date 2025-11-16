@@ -1,5 +1,5 @@
 import networkx as nx
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 
 def get_topological_task_order(G: nx.DiGraph) -> List[str]:
     """
@@ -172,5 +172,95 @@ def get_unique_task_names(G: nx.DiGraph) -> List[Tuple[str, int, int]]:
         stage_index = x_pos_to_stage[x_pos]
         parallelism = task_parallelism.get(task_name, 1)
         result.append((task_name, stage_index, parallelism))
+    
+    return result
+
+
+def get_tasks_by_stage_numbers(G: nx.DiGraph, stage_numbers: List[int]) -> List[str]:
+    """
+    Returns all task node IDs that belong to the specified stage numbers.
+    
+    Args:
+        G: The DFL-DAG (networkx.DiGraph).
+        stage_numbers: List of stage numbers (0-based indices, e.g., [0, 1] for stages 1 and 2).
+    
+    Returns:
+        A list of task node IDs in the specified stages, sorted by stage then instance.
+    """
+    # Get unique x positions (stages) and map them to stage indices
+    unique_x_positions = sorted(set(
+        G.nodes[node].get('pos', (0, 0))[0]
+        for node, data in G.nodes(data=True)
+        if data.get('type') == 'task'
+    ))
+    
+    x_pos_to_stage = {x: i for i, x in enumerate(unique_x_positions)}
+    
+    # Collect tasks in the specified stages
+    tasks_in_stages = []
+    for node, data in G.nodes(data=True):
+        if data.get('type') == 'task':
+            pos = data.get('pos', (0, 0))
+            x_pos = pos[0]
+            stage_index = x_pos_to_stage.get(x_pos, -1)
+            if stage_index in stage_numbers:
+                tasks_in_stages.append(node)
+    
+    # Sort by stage, then by instance number
+    def sort_key(node_id):
+        node_data = G.nodes[node_id]
+        pos = node_data.get('pos', (0, 0))
+        stage = x_pos_to_stage.get(pos[0], -1)
+        instance = 0
+        if '_' in node_id:
+            try:
+                instance = int(node_id.rsplit('_', 1)[1])
+            except (ValueError, IndexError):
+                pass
+        return (stage, instance)
+    
+    tasks_in_stages.sort(key=sort_key)
+    return tasks_in_stages
+
+
+def get_stage_info(G: nx.DiGraph) -> Dict[int, List[Tuple[str, int]]]:
+    """
+    Returns information about all stages in the workflow.
+    
+    Args:
+        G: The DFL-DAG (networkx.DiGraph).
+    
+    Returns:
+        A dictionary mapping stage numbers (0-based) to lists of (task_name, instance_count) tuples.
+    """
+    # Get unique x positions (stages) and map them to stage indices
+    unique_x_positions = sorted(set(
+        G.nodes[node].get('pos', (0, 0))[0]
+        for node, data in G.nodes(data=True)
+        if data.get('type') == 'task'
+    ))
+    
+    x_pos_to_stage = {x: i for i, x in enumerate(unique_x_positions)}
+    
+    # Group tasks by stage
+    stage_info = {}
+    for node, data in G.nodes(data=True):
+        if data.get('type') == 'task':
+            pos = data.get('pos', (0, 0))
+            x_pos = pos[0]
+            stage_index = x_pos_to_stage.get(x_pos, -1)
+            
+            if stage_index not in stage_info:
+                stage_info[stage_index] = {}
+            
+            task_name = data.get('task_name', '')
+            if task_name not in stage_info[stage_index]:
+                stage_info[stage_index][task_name] = 0
+            stage_info[stage_index][task_name] += 1
+    
+    # Convert to list of tuples
+    result = {}
+    for stage, task_counts in stage_info.items():
+        result[stage] = [(task_name, count) for task_name, count in sorted(task_counts.items())]
     
     return result

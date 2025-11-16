@@ -68,10 +68,11 @@ The CLI automatically discovers all available workflows in the `workflow_traces/
 The MCP server is designed to work with LLM applications that support the Model Context Protocol. The server exposes three main tools:
 
 **Available Tools:**
-- `get_sankey_data` - Generate interactive Sankey diagram HTML
+- `get_sankey_data` - Generate interactive Sankey diagram HTML (supports filtering by stage numbers, task IDs, or task ranges)
 - `get_flow_summary_stats` - Calculate workflow statistics
 - `analyze_critical_path` - Identify critical path and optimization opportunities
 - `adjust_sankey_canvas_size` - Adjust the canvas size of the last generated Sankey diagram
+- `list_workflow_stages` - List all stages in a workflow with their tasks (useful for understanding workflow structure)
 
 #### Running the MCP Server
 
@@ -153,8 +154,10 @@ To use the DFL Visualization tools directly in Claude Desktop conversations:
 
 4. **Use Natural Language** to request analyses:
    - "Generate a Sankey diagram for the ddmd workflow"
+   - "Generate a Sankey diagram for the ddmd workflow with only stage 1 and 2 tasks"
    - "Analyze the critical path using volume as the metric"
    - "Show me flow statistics for tasks openmm_0 through openmm_3"
+   - "List all stages in the ddmd workflow"
 
 #### Cursor IDE Integration
 
