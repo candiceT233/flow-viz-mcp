@@ -38,7 +38,7 @@ class TestGraphBuilder(unittest.TestCase):
 
     def test_add_task_nodes(self):
         G = nx.DiGraph()
-        _add_task_nodes(G, self.mock_schema)
+        _add_task_nodes(G, self.mock_schema, self.mock_traces, self.pid_to_task_name)
         
         self.assertEqual(G.number_of_nodes(), 3) # task_A_0, task_A_1, task_B_0
         self.assertIn('task_A_0', G.nodes)
@@ -58,7 +58,7 @@ class TestGraphBuilder(unittest.TestCase):
 
     def test_add_file_nodes(self):
         G = nx.DiGraph()
-        _add_task_nodes(G, self.mock_schema) # Need tasks for file positioning
+        _add_task_nodes(G, self.mock_schema, self.mock_traces, self.pid_to_task_name) # Need tasks for file positioning
         _add_file_nodes(G, self.mock_schema, self.mock_traces, self.pid_to_task_name)
 
         self.assertIn('fileA_output_0.h5', G.nodes)
@@ -78,7 +78,7 @@ class TestGraphBuilder(unittest.TestCase):
 
     def test_add_edges_and_annotate(self):
         G = nx.DiGraph()
-        _add_task_nodes(G, self.mock_schema) # Setup nodes for edges
+        _add_task_nodes(G, self.mock_schema, self.mock_traces, self.pid_to_task_name) # Setup nodes for edges
         _add_file_nodes(G, self.mock_schema, self.mock_traces, self.pid_to_task_name)
         _add_edges_and_annotate(G, self.mock_schema, self.mock_traces, self.pid_to_task_name)
 

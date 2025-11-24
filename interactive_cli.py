@@ -295,18 +295,31 @@ def flow_summary_menu(server, workflow_name):
             selected_tasks=selected_tasks,
             output_file=output_file
         )
-        print(f"\n[SUCCESS] {result}")
+
+        if isinstance(result, dict):
+            saved_path = result.get("output_file")
+            summary_text = result.get("summary_text")
+            print(f"\n[SUCCESS] Summary saved to {saved_path}")
+        else:
+            saved_path = output_file
+            summary_text = None
+            print(f"\n[SUCCESS] {result}")
         
         # Optionally display the content
         show_content = get_user_choice("\nDisplay summary content? (y/n): ", ["y", "n", "Y", "N"])
-        if show_content.lower() == "y" and output_file:
-            try:
-                with open(output_file, 'r') as f:
-                    print("\n" + "="*70)
-                    print(f.read())
-                    print("="*70)
-            except Exception as e:
-                print(f"[ERROR] Could not read file: {e}")
+        if show_content.lower() == "y":
+            if summary_text:
+                print("\n" + "="*70)
+                print(summary_text)
+                print("="*70)
+            elif saved_path:
+                try:
+                    with open(saved_path, 'r') as f:
+                        print("\n" + "="*70)
+                        print(f.read())
+                        print("="*70)
+                except Exception as e:
+                    print(f"[ERROR] Could not read file: {e}")
     except Exception as e:
         print(f"\n[ERROR] {e}")
 

@@ -276,12 +276,15 @@ def _add_edges_and_annotate(G: nx.DiGraph, schema: WorkflowSchema, traces: List[
             edge_data = G.edges[source_node, target_node]
             edge_data.setdefault('volume', 0)
             edge_data.setdefault('op_count', 0)
+            edge_data.setdefault('io_time', 0.0)
             
             edge_data['volume'] += trace.total_bytes
             edge_data['op_count'] += trace.op_count
+            if trace.io_time and trace.io_time > 0:
+                edge_data['io_time'] += trace.io_time
             
-            if trace.io_time > 0:
-                edge_data['rate'] = trace.total_bytes / trace.io_time
+            if edge_data['io_time'] > 0:
+                edge_data['rate'] = edge_data['volume'] / edge_data['io_time']
 
 def _normalize_positions(G: nx.DiGraph):
     """Normalizes the x and y positions of all nodes in the graph."""
