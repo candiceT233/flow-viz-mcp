@@ -103,7 +103,7 @@ Open or create the `mcp.json` file and add the following configuration:
 ```json
 {
   "mcpServers": {
-    "dfl-visualization": {
+    "flow-viz-mcp": {
       "command": "python",
       "args": ["<path-to-your-project-directory>/run_server.py"],
       "cwd": "<path-to-your-project-directory>",
@@ -121,7 +121,7 @@ Open or create the `mcp.json` file and add the following configuration:
    ```json
    {
      "mcpServers": {
-       "dfl-visualization": {
+       "flow-viz-mcp": {
          "command": "uv",
          "args": ["run", "run_server.py"],
          "cwd": "/Users/mengtang/script/flow-viz-mcp"
@@ -134,7 +134,7 @@ Open or create the `mcp.json` file and add the following configuration:
    ```json
    {
      "mcpServers": {
-       "dfl-visualization": {
+       "flow-viz-mcp": {
          "command": "python",
          "args": ["/Users/mengtang/script/flow-viz-mcp/run_server.py"],
          "cwd": "/Users/mengtang/script/flow-viz-mcp",
@@ -245,7 +245,7 @@ Open or create the configuration file and add:
 ```json
 {
   "mcpServers": {
-    "dfl-visualization": {
+    "flow-viz-mcp": {
       "command": "uv",
       "args": ["run", "run_server.py"],
       "cwd": "<path-to-your-project-directory>"
@@ -258,7 +258,7 @@ Open or create the configuration file and add:
 ```json
 {
   "mcpServers": {
-    "dfl-visualization": {
+    "flow-viz-mcp": {
       "command": "uv",
       "args": ["run", "run_server.py"],
       "cwd": "/Users/mengtang/script/flow-viz-mcp"
@@ -271,7 +271,7 @@ Open or create the configuration file and add:
 ```json
 {
   "mcpServers": {
-    "dfl-visualization": {
+    "flow-viz-mcp": {
       "command": "python",
       "args": ["<path-to-your-project-directory>/run_server.py"],
       "cwd": "<path-to-your-project-directory>",
@@ -324,7 +324,7 @@ For Gemini terminal agent, update `.gemini/settings.json`:
 ```json
 {
   "mcpServers": {
-    "dfl-visualization": {
+    "flow-viz-mcp": {
       "url": "http://localhost:8000",
       "transport": "http"
     }
@@ -339,7 +339,7 @@ For Gemini terminal agent, update `.gemini/settings.json`:
 Some terminal agents allow MCP server configuration via environment variables. Set:
 
 ```bash
-export MCP_SERVERS='{"dfl-visualization": {"command": "python", "args": ["<path-to-your-project-directory>/run_server.py"], "cwd": "<path-to-your-project-directory>", "env": {"PATH": "<path-to-your-project-directory>/.venv/bin:${PATH}"}}}'
+export MCP_SERVERS='{"flow-viz-mcp": {"command": "python", "args": ["<path-to-your-project-directory>/run_server.py"], "cwd": "<path-to-your-project-directory>", "env": {"PATH": "<path-to-your-project-directory>/.venv/bin:${PATH}"}}}'
 ```
 
 Add this to your shell configuration file (`~/.zshrc`, `~/.bashrc`, etc.) to make it persistent.
@@ -474,7 +474,7 @@ Use this template for any MCP client:
 ```json
 {
   "mcpServers": {
-    "dfl-visualization": {
+    "flow-viz-mcp": {
       "command": "python",
       "args": ["<absolute-path-to-project>/run_server.py"],
       "cwd": "<absolute-path-to-project>",

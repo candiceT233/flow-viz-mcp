@@ -1,0 +1,149 @@
+[
+{
+  "name": "get-workflow-diagram",
+  "description": "Show a workflow diagram with tasks and dataflow arranged from left to right in execution order.",
+  "arguments": [
+    {
+      "name": "workflow_name",
+      "description": "Name of the workflow discovered under workflow_traces/ (e.g., ddmd, montage).",
+      "required": true
+    },
+    {
+      "name": "stage_numbers",
+      "description": "Optional 0-based stage indices to include (highest filtering priority).",
+      "required": false
+    },
+    {
+      "name": "selected_tasks",
+      "description": "Optional explicit list of task IDs (e.g., openmm_0) to visualize.",
+      "required": false
+    },
+    {
+      "name": "start_task_id",
+      "description": "Optional starting task ID when specifying a task range filter.",
+      "required": false
+    },
+    {
+      "name": "end_task_id",
+      "description": "Optional ending task ID when specifying a task range filter.",
+      "required": false
+    },
+    {
+      "name": "selected_files",
+      "description": "Optional file-node IDs to restrict the visualization to certain datasets.",
+      "required": false
+    },
+    {
+      "name": "metric",
+      "description": "Edge metric to score flows: volume, op_count, or rate.",
+      "required": false
+    },
+    {
+      "name": "output_file",
+      "description": "Desired HTML output filename saved under output/ (default sankey.html).",
+      "required": false
+    },
+    {
+      "name": "highlight_critical_path",
+      "description": "Whether to overlay the generalized critical path in the Sankey diagram.",
+      "required": false
+    },
+    {
+      "name": "font_size",
+      "description": "Font size for node labels in the Sankey diagram.",
+      "required": false
+    },
+    {
+      "name": "node_pad",
+      "description": "Padding between nodes in the Sankey diagram.",
+      "required": false
+    },
+    {
+      "name": "transform_link_value",
+      "description": "Whether to apply square-root scaling to link values for readability.",
+      "required": false
+    }
+  ],
+  "prompt": "## Goal\\nGet a workflow Sankey diagram from the collected workflow traces.\\n\\n## Tool Action\\nUse get_sankey_data to generate a diagram (call adjust_sankey_canvas_size afterward only if you need to resize the last diagram).\\n\\n## Context / Constraints\\nTool: [get_sankey_data | adjust_sankey_canvas_size | get_flow_summary_stats | analyze_critical_path | list_workflow_stages]\\nProvide only the arguments that matter for this run. Stage filters override task lists, which override start/end ranges.\\n\\n## Expected Output\\nReturn the generated Sankey HTML path plus any relevant filter summary or follow-up instructions."
+},
+{
+  "name": "get-subset-workflow-diagram",
+  "description": "Plot a subset workflow diagram focusing on specific stages (e.g., stage 1 through stage 2) or selected task families (e.g., openmm, training). Include each chosen task node plus every file node directly connected to it, ordered left-to-right by execution.",
+  "arguments": [
+    {
+      "name": "workflow_name",
+      "description": "Workflow folder name under workflow_traces/ (ddmd, montage, etc.).",
+      "required": true
+    },
+    {
+      "name": "stage_numbers",
+      "description": "Required when selecting by stages: provide the inclusive 0-based indices covering the desired stage range (stage 1→2 = [0,1]).",
+      "required": false
+    },
+    {
+      "name": "selected_tasks",
+      "description": "Required when selecting by task families: list the task prefixes or explicit task IDs (e.g., openmm, training, openmm_0).",
+      "required": false
+    },
+    {
+      "name": "metric",
+      "description": "Flow metric to size edges for the subset view (volume|op_count|rate).",
+      "required": false
+    },
+    {
+      "name": "output_file",
+      "description": "HTML filename for the subset diagram (default subset_sankey.html).",
+      "required": false
+    },
+    {
+      "name": "highlight_critical_path",
+      "description": "Optional: highlight the critical-path edges within the filtered subgraph.",
+      "required": false
+    },
+    {
+      "name": "font_size",
+      "description": "Font size for node labels.",
+      "required": false
+    },
+    {
+      "name": "node_pad",
+      "description": "Padding between nodes.",
+      "required": false
+    },
+    {
+      "name": "transform_link_value",
+      "description": "Apply square-root scaling to link values for readability.",
+      "required": false
+    }
+  ],
+  "prompt": "## Goal\\nRender a subset Sankey diagram covering either a specific stage range (stage 1 through stage 2) or named task families (e.g., openmm and training).\\n\\n## Selection Rules\\n- If using stages, provide 0-based stage_numbers covering the inclusive range.\\n- If using tasks, list the task families or exact task IDs; the server will include their instances plus every immediately connected file node (both inputs and outputs).\\n- Do not mix stage_numbers with selected_tasks in the same call.\\n\\n## Tool Action\\nCall get_sankey_data with only the arguments required for the chosen selection mode. Leave start/end task range blank.\\n\\n## Context / Constraints\\nTool: get_sankey_data\\n- Stage filters override task filters; pick one mode.\\n- Arrange all returned nodes left-to-right based on workflow order.\\n- Include highlight_critical_path only when the subset should emphasize bottlenecks.\\n\\n## Expected Output\\nReturn the subset Sankey HTML path plus a summary of which stages/tasks were included and how many file nodes were captured."
+},
+{
+  "name": "get-workflow-io-summary",
+  "description": "Produce a complete workflow I/O summary that aggregates read/write volume, operation counts, and (when available) average bandwidth, both at the workflow level and broken down per task.",
+  "arguments": [
+    {
+      "name": "workflow_name",
+      "description": "Workflow directory name under workflow_traces/ (e.g., ddmd, montage).",
+      "required": true
+    },
+    {
+      "name": "selected_tasks",
+      "description": "Optional subset of tasks to include. Leave empty (or omit) to get statistics for ALL tasks in the workflow. If provided, only returns stats for the specified tasks.",
+      "required": false
+    },
+    {
+      "name": "selected_files",
+      "description": "Optional list of file-node IDs to restrict the stats to specific datasets.",
+      "required": false
+    },
+    {
+      "name": "output_file",
+      "description": "Optional text filename (saved under output/) where the summary will be written.",
+      "required": false
+    }
+  ],
+  "prompt": "## Goal\\nReport all workflow and per-task I/O statistics (volume, op_count, and averaged bandwidth when available) for both reads and writes.\\n\\n## Required Breakdown\\n1. Total workflow I/O (all ops)\\n2. Total workflow read I/O\\n3. Total workflow write I/O\\n4. Per-task combined I/O\\n5. Per-task read I/O\\n6. Per-task write I/O\\nEach entry should list volume, operation count, and averaged bandwidth (skip bandwidth only if data missing).\\n\\n## Tool Action\\nCall get_flow_summary_stats with the workflow_name. DO NOT provide selected_tasks unless the user specifically asks for a subset of tasks. To get statistics for ALL tasks, omit selected_tasks entirely or pass an empty list. Provide output_file if you need the numbers saved.\\n\\n## Context / Constraints\\n- Tool: get_flow_summary_stats\\n- By default (when selected_tasks is empty/omitted), include every task in the workflow\\n- Only filter by selected_tasks if the user explicitly requests statistics for specific tasks\\n- Ensure tasks are ordered topologically when presenting results\\n- Highlight any missing metrics (e.g., bandwidth unavailable) explicitly in the summary text\\n\\n## Expected Output\\nReturn a formatted summary (and saved file path if output_file was given) that lists the six breakdowns above. For each section, present volume, op_count, and averaged bandwidth (when available) in a clear, readable format."
+}
+]
+

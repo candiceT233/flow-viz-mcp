@@ -5,9 +5,107 @@ from networkx.drawing.nx_pydot import graphviz_layout
 import plotly.graph_objects as go
 from typing import List
 
+def expand_task_names_to_ids(G: nx.DiGraph, task_names: List[str]) -> List[str]:
+    """
+    Expands task name prefixes to actual task node IDs.
+    
+    For example, if task_names = ["openmm", "aggregate"], this will find all nodes
+    like "openmm_0", "openmm_1", "aggregate_0", etc.
+    
+    Args:
+        G: The DFL-DAG.
+        task_names: List of task name prefixes or exact task IDs.
+    
+    Returns:
+        A list of actual task node IDs that match the given names.
+    """
+    if not task_names:
+        return []
+    
+    expanded_ids = []
+    task_names_set = set(task_names)
+    
+    for node, data in G.nodes(data=True):
+        if data.get('type') == 'task':
+            node_id = node
+            task_name = data.get('task_name', '')
+            
+            # Check if exact node ID matches
+            if node_id in task_names_set:
+                expanded_ids.append(node_id)
+            # Check if task name matches (prefix match)
+            elif task_name in task_names_set:
+                expanded_ids.append(node_id)
+            # Check if node_id starts with any task name prefix
+            else:
+                for prefix in task_names_set:
+                    if node_id.startswith(prefix + '_') or node_id == prefix:
+                        expanded_ids.append(node_id)
+                        break
+    
+    return list(set(expanded_ids))  # Remove duplicates
+
+def _recalculate_positions_for_subgraph(G: nx.DiGraph) -> None:
+    """
+    Recalculates node positions for a filtered subgraph to ensure proper ordering.
+    Tasks are ordered by their original stage, and files are positioned between their producer and consumer tasks.
+    
+    Args:
+        G: The filtered subgraph (modified in place).
+    """
+    # Get all task nodes and sort by their original x position (stage)
+    task_nodes = [(node, G.nodes[node]) for node in G.nodes() if G.nodes[node].get('type') == 'task']
+    
+    if not task_nodes:
+        return
+    
+    # Sort tasks by their original x position to maintain stage order
+    task_nodes.sort(key=lambda x: (x[1].get('pos', (0, 0))[0], x[1].get('task_instance', 0)))
+    
+    # Assign new x positions to tasks (0, 2, 4, ...)
+    task_x_positions = {}
+    for i, (node, data) in enumerate(task_nodes):
+        task_x_positions[node] = i * 2
+        # Update task position
+        old_pos = data.get('pos', (0, 0))
+        G.nodes[node]['pos'] = (i * 2, old_pos[1])
+    
+    # Now position file nodes based on their connections
+    file_nodes = [(node, G.nodes[node]) for node in G.nodes() if G.nodes[node].get('type') == 'file']
+    
+    for file_node, file_data in file_nodes:
+        # Find all tasks that write to this file (producers)
+        producer_tasks = [u for u, v in G.in_edges(file_node) if G.nodes[u].get('type') == 'task']
+        # Find all tasks that read from this file (consumers)
+        consumer_tasks = [v for u, v in G.out_edges(file_node) if G.nodes[v].get('type') == 'task']
+        
+        if producer_tasks and consumer_tasks:
+            # File is between producer and consumer - position it between them
+            max_producer_x = max(task_x_positions.get(t, 0) for t in producer_tasks)
+            min_consumer_x = min(task_x_positions.get(t, float('inf')) for t in consumer_tasks)
+            # Position file between producer and consumer
+            file_x = (max_producer_x + min_consumer_x) / 2
+        elif producer_tasks:
+            # File is only produced, position it right after the producer
+            max_producer_x = max(task_x_positions.get(t, 0) for t in producer_tasks)
+            file_x = max_producer_x + 1
+        elif consumer_tasks:
+            # File is only consumed (input file), position it before the consumer
+            min_consumer_x = min(task_x_positions.get(t, float('inf')) for t in consumer_tasks)
+            file_x = max(0, min_consumer_x - 1)
+        else:
+            # File has no task connections, keep original position
+            old_pos = file_data.get('pos', (0, 0))
+            file_x = old_pos[0]
+        
+        # Update file position
+        old_pos = file_data.get('pos', (0, 0))
+        G.nodes[file_node]['pos'] = (file_x, old_pos[1])
+
 def filter_subgraph(G: nx.DiGraph, selected_tasks: List[str], selected_files: List[str]) -> nx.DiGraph:
     """
     Filters the DFL-DAG to include only the selected tasks and files and their direct neighbors.
+    Recalculates node positions to ensure proper ordering in the filtered view.
 
     Args:
         G: The DFL-DAG.
@@ -15,7 +113,7 @@ def filter_subgraph(G: nx.DiGraph, selected_tasks: List[str], selected_files: Li
         selected_files: A list of selected file IDs.
 
     Returns:
-        A new DiGraph containing the filtered subgraph.
+        A new DiGraph containing the filtered subgraph with recalculated positions.
     """
     if not selected_tasks and not selected_files:
         return G
@@ -34,7 +132,13 @@ def filter_subgraph(G: nx.DiGraph, selected_tasks: List[str], selected_files: Li
                 nodes_to_include.update(G.predecessors(file_node))
                 nodes_to_include.update(G.successors(file_node))
 
-    return G.subgraph(nodes_to_include)
+    # Create filtered subgraph
+    filtered_G = G.subgraph(nodes_to_include).copy()
+    
+    # Recalculate positions for the filtered subgraph
+    _recalculate_positions_for_subgraph(filtered_G)
+    
+    return filtered_G
 
 def create_sankey_html(G: nx.DiGraph, metric: str, output_path: str, critical_path_edges: list = None, width: int = 1800, height: int = 2000, font_size: int = 10, node_pad: int = 15, transform_link_value: bool = True):
     """

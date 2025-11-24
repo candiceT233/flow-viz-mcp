@@ -3,7 +3,7 @@ from typing import List
 from .data_parser import SchemaLoader, TraceParser
 from .graph_builder import build_dfl_dag
 from .config import INPUT_DIR
-from .analysis.sankey_utils import filter_subgraph, create_sankey_html
+from .analysis.sankey_utils import filter_subgraph, create_sankey_html, expand_task_names_to_ids
 from .analysis.metrics import calculate_flow_summary_stats
 from .analysis.task_ordering import get_topological_task_order, get_tasks_in_range, get_tasks_by_stage_numbers, get_stage_info
 import os
@@ -18,7 +18,7 @@ class DFLVisualizationMCP(FastMCP):
     """
 
     def __init__(self, workflow_name: str = None):
-        super().__init__(name="DFLVisualization")
+        super().__init__(name="flow-viz-mcp")
         
         # Discover available workflows
         self.available_workflows = self._discover_workflows()
@@ -181,7 +181,7 @@ class DFLVisualizationMCP(FastMCP):
             workflow_name: The name of the workflow to visualize (required).
             start_task_id: Optional starting task ID for range filtering (e.g., 'openmm_0').
             end_task_id: Optional ending task ID for range filtering (e.g., 'training_0').
-            selected_tasks: Optional list of specific task IDs to include (e.g., ['openmm_0', 'openmm_1']).
+            selected_tasks: Optional list of task IDs or task name prefixes to include (e.g., ['openmm_0', 'openmm_1'] or ['openmm', 'aggregate']). Task name prefixes will be expanded to all matching task instances.
             stage_numbers: Optional list of stage numbers to include (0-based, e.g., [0, 1] for stages 1 and 2).
             selected_files: A list of selected file IDs (optional).
             metric: The edge attribute to use for the flow value ('volume', 'op_count', or 'rate').
@@ -206,8 +206,8 @@ class DFLVisualizationMCP(FastMCP):
             # Filter by stage numbers (highest priority)
             tasks_to_include = get_tasks_by_stage_numbers(dag, stage_numbers)
         elif selected_tasks and len(selected_tasks) > 0:
-            # Use explicitly selected tasks
-            tasks_to_include = selected_tasks
+            # Expand task name prefixes to actual task IDs (e.g., "openmm" -> ["openmm_0", "openmm_1", ...])
+            tasks_to_include = expand_task_names_to_ids(dag, selected_tasks)
         elif start_task_id or end_task_id:
             # Use range filtering
             if start_task_id and not end_task_id:
@@ -261,20 +261,27 @@ class DFLVisualizationMCP(FastMCP):
 
     def get_flow_summary_stats(self, workflow_name: str, selected_tasks: List[str] = [], selected_files: List[str] = [], output_file: str = None) -> str:
         """
-        Computes summary statistics for a selected data flow section and saves it to a file.
+        Computes comprehensive I/O summary statistics for a workflow or filtered subset.
+        Returns workflow-level and per-task breakdowns for total, read, and write I/O operations,
+        including volume, operation count, and average bandwidth (when available).
 
         Args:
             workflow_name: The name of the workflow to analyze (required).
-            selected_tasks: A list of selected task IDs (optional).
-            selected_files: A list of selected file IDs (optional).
-            output_file: Optional path to save the summary file.
+            selected_tasks: A list of selected task IDs to filter (optional, empty list returns ALL tasks in the workflow).
+            selected_files: A list of selected file IDs to filter (optional).
+            output_file: Optional path to save the summary file (defaults to output/{workflow_name}_summary.txt).
 
         Returns:
-            A string confirming the path to the saved summary file.
+            A formatted string containing:
+            - Workflow totals (all I/O, read I/O, write I/O)
+            - Per-task breakdown (all tasks if selected_tasks is empty, otherwise filtered tasks)
+            - Each entry includes volume, operation count, and average bandwidth (when available)
         """
         dag = self._load_workflow(workflow_name)
         subgraph = filter_subgraph(dag, selected_tasks, selected_files)
-        return calculate_flow_summary_stats(subgraph, output_file, workflow_name)
+        result = calculate_flow_summary_stats(subgraph, output_file, workflow_name)
+        # Return the human-readable summary text instead of the dict
+        return result["summary_text"]
 
     def analyze_critical_path(self, workflow_name: str, weight_property: str = 'volume') -> dict:
         """
@@ -310,7 +317,7 @@ class DFLVisualizationMCP(FastMCP):
             "opportunities": opportunities
         }
 
-    def list_workflow_stages(self, workflow_name: str) -> dict:
+    def list_workflow_stages(self, workflow_name: str) -> str:
         """
         Lists all stages in the workflow with their tasks and instance counts.
         Useful for understanding the workflow structure before filtering.
@@ -319,21 +326,21 @@ class DFLVisualizationMCP(FastMCP):
             workflow_name: The name of the workflow to analyze (required).
 
         Returns:
-            A dictionary containing stage information with task names and counts.
+            A formatted string containing stage information with task names and counts.
         """
         dag = self._load_workflow(workflow_name)
         stage_info = get_stage_info(dag)
         
-        # Format the response
-        formatted_stages = {}
-        for stage_num, tasks in sorted(stage_info.items()):
-            formatted_stages[f"Stage {stage_num + 1}"] = {
-                task_name: f"{count} instance(s)" for task_name, count in tasks
-            }
+        # Build formatted response string
+        lines = [f"Workflow: {workflow_name}", f"Total Stages: {len(stage_info)}", ""]
+        lines.append("Stages:")
         
-        return {
-            "workflow_name": workflow_name,
-            "total_stages": len(stage_info),
-            "stages": formatted_stages,
-            "note": "Stage numbers in API are 0-based (use [0, 1] for stages 1 and 2)"
-        }
+        for stage_num, tasks in sorted(stage_info.items()):
+            stage_display = stage_num + 1  # Convert 0-based to 1-based for display
+            lines.append(f"\nStage {stage_display} (API index: {stage_num}):")
+            for task_name, count in sorted(tasks):
+                lines.append(f"  - {task_name}: {count} instance(s)")
+        
+        lines.append("\nNote: Stage numbers in API are 0-based (use [0, 1] for stages 1 and 2)")
+        
+        return "\n".join(lines)
