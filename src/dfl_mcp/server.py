@@ -278,7 +278,11 @@ class DFLVisualizationMCP(FastMCP):
             - Each entry includes volume, operation count, and average bandwidth (when available)
         """
         dag = self._load_workflow(workflow_name)
-        subgraph = filter_subgraph(dag, selected_tasks, selected_files)
+        if selected_tasks: # Only expand if selected_tasks is not empty
+            expanded_tasks = expand_task_names_to_ids(dag, selected_tasks)
+            subgraph = filter_subgraph(dag, expanded_tasks, selected_files)
+        else:
+            subgraph = filter_subgraph(dag, selected_tasks, selected_files) # selected_tasks will be empty here, effectively no task filtering
         result = calculate_flow_summary_stats(subgraph, output_file, workflow_name)
         # Return the human-readable summary text instead of the dict
         return result["summary_text"]
